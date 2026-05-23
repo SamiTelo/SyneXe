@@ -3,6 +3,7 @@ import { BlogSection } from "./components/Blog";
 import { CounterSection } from "./components/counter";
 import { CtaSection } from "./components/Cta";
 import { FaqSection } from "./components/Faq";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/Hero";
 import { PartnersSection } from "./components/Partner";
@@ -37,7 +38,7 @@ export const HomeView = () => {
          {/* ---------------------------
         global  Footer
       ---------------------------- */}
-    
+        <Footer/>
     </>
   );
 };
