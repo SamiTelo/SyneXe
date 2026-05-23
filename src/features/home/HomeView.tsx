@@ -1,18 +1,27 @@
-import { Header } from "./components/Header"
-import { HeroSection } from "./components/Hero"
-
+import { AboutSection } from "./components/about";
+import { CounterSection } from "./components/counter";
+import { Header } from "./components/Header";
+import { HeroSection } from "./components/Hero";
 
 export const HomeView = () => {
-    return (
-        <>
-         {/* ---------------------------
+  return (
+    <>
+      {/* ---------------------------
         global Header
        ---------------------------- */}
-        <Header/>
+      <Header />
       {/* ---------------------------
         Main content
       ---------------------------- */}
-        <HeroSection/>
-        </>
-    )
-}
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <CounterSection/>
+      </main>
+         {/* ---------------------------
+        global  Footer
+      ---------------------------- */}
+    
+    </>
+  );
+};
