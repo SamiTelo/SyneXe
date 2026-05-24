@@ -11,9 +11,9 @@ type Stat = {
 
 const stats: Stat[] = [
   { value: 120, suffix: "k", label: "Clients Satisfaits" },
-  { value: 700, suffix: "k", label: "Projets Livrés" },
+  { value: 200, suffix: "k", label: "Projets Livrés" },
   { value: 100, suffix: "%", label: "Résultats Garantis" },
-  { value: 280, suffix: "+", label: "Experts Certifiés" },
+  { value: 80, suffix: "+", label: "Experts Certifiés" },
 ];
 
 const AnimatedCounter = ({
@@ -63,7 +63,7 @@ export const CounterSection = () => {
         ----------------------------------------------------*/}
       <div
         ref={ref}
-        className="relative max-w-297.5 mx-auto rounded-4xl overflow-hidden"
+        className="relative max-w-309 mx-auto rounded-4xl overflow-hidden"
         style={{ background: "#684df4" }}
       >
         {/* ----------------------------------------

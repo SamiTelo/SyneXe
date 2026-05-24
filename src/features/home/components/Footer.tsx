@@ -9,31 +9,47 @@ import {
 
 export const Footer = () => {
   return (
-    <section className="w-full bg-[#e8eaf6]">
-      {/*----------------------------------------------
-           Main Content Grid 
+    <section className="w-full bg-[#e8eaf6] overflow-hidden">
+      {/*-------------------------------------------------
+           Main Content Grid
         ----------------------------------------------------*/}
-      <div className="max-w-[1400px] mx-auto px-8 py-16 grid grid-cols-[1fr_auto_auto_auto] gap-x-16 gap-y-0 items-start">
+      <div
+        className="
+          max-w-326.25
+          mx-auto
+          px-6
+          sm:px-8
+          py-36
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-[1fr_auto_auto_auto]
+          gap-x-20
+          gap-y-14
+          items-start
+        "
+      >
         {/* ----------------------------------------
-              BLOC 1 — Brand / Description / Socials
+            BLOC 1 — Brand / Description / Socials
            ----------------------------------------------- */}
         <div className="flex flex-col gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="/images/logo.png"
+              src="/assets/logo-light.svg"
               alt="NexSolve Logo"
               width={40}
               height={40}
               className="object-contain"
             />
-            <span className="text-[1.6rem] font-bold text-[#1a1a3e] leading-none tracking-tight">
-              <span className="font-light">Nex</span>Solve
+
+            <span className="text-[1.6rem] font-bold text-indigo-500 leading-none tracking-tight">
+              <span className="font-light text-[#1a1a3e]">Syne</span>Xa
             </span>
           </div>
 
           {/* Tagline */}
-          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-[260px]">
+          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-65">
             Nous transformons vos défis numériques en solutions performantes.
             Expertise, innovation et agilité au service de votre croissance IT.
           </p>
@@ -49,7 +65,22 @@ export const Footer = () => {
               <button
                 key={label}
                 aria-label={label}
-                className="w-10 h-10 rounded-full border border-[#b0b3d6] flex items-center justify-center text-[#4a4a6a] hover:bg-[#5c35d4] hover:text-white hover:border-[#5c35d4] transition-all duration-200"
+                className="
+                  w-10
+                  h-10
+                  rounded-full
+                  border
+                  border-[#b0b3d6]
+                  flex
+                  items-center
+                  justify-center
+                  text-[#4a4a6a]
+                  hover:bg-[#5c35d4]
+                  hover:text-white
+                  hover:border-[#5c35d4]
+                  transition-all
+                  duration-200
+                "
               >
                 {icon}
               </button>
@@ -60,37 +91,51 @@ export const Footer = () => {
         {/* ----------------------------------------
               BLOC 2 — Quick Links
            ----------------------------------------------- */}
-        <div className="flex flex-col gap-5 min-w-[160px]">
+        <div className="flex flex-col gap-5">
           {/* Heading */}
           <div>
-            <h3 className="text-[1rem] font-extrabold text-[#1a1a3e] uppercase tracking-widest mb-2">
+            <h3 className="text-[1rem] font-bold text-[#1a1a3e] uppercase tracking-widest mb-2">
               Liens Rapides
             </h3>
-            {/* Underline decorator */}
-            <div className="flex items-center gap-1">
-              <div className="w-16 h-[2px] bg-[#5c35d4]" />
-              <div className="w-2 h-2 rounded-full bg-[#5c35d4] -ml-1" />
-            </div>
+
+            {/* Underline */}
+            <div className="w-16 h-0.5 bg-[#5c35d4]" />
           </div>
 
           {/* Links */}
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 mt-8">
             {[
               "À Propos",
               "Notre Équipe",
               "FAQ",
-              "Nos Projets",
+              "Nos Services",
               "Contactez-nous",
             ].map((link) => (
               <li key={link}>
                 <a
                   href="#"
-                  className="flex items-center gap-2 text-[0.875rem] text-[#4a4a6a] hover:text-[#5c35d4] transition-colors duration-150 group"
+                  className="
+                    flex
+                    items-center
+                    gap-2
+                    text-[0.875rem]
+                    text-[#4a4a6a]
+                    hover:text-[#5c35d4]
+                    transition-colors
+                    duration-150
+                    group
+                  "
                 >
                   <ChevronRight
                     size={14}
-                    className="text-[#5c35d4] group-hover:translate-x-1 transition-transform duration-150"
+                    className="
+                      text-[#5c35d4]
+                      group-hover:translate-x-1
+                      transition-transform
+                      duration-150
+                    "
                   />
+
                   {link}
                 </a>
               </li>
@@ -101,48 +146,70 @@ export const Footer = () => {
         {/* ----------------------------------------
               BLOC 3 — Contact Us
            ----------------------------------------------- */}
-        <div className="flex flex-col gap-5 min-w-[240px]">
+        <div className="flex flex-col gap-5">
           {/* Heading */}
           <div>
-            <h3 className="text-[1rem] font-extrabold text-[#1a1a3e] uppercase tracking-widest mb-2">
+            <h3 className="text-[1rem] font-bold text-[#1a1a3e] uppercase tracking-widest mb-2">
               Contactez-nous
             </h3>
-            <div className="flex items-center gap-1">
-              <div className="w-16 h-[2px] bg-[#5c35d4]" />
-              <div className="w-2 h-2 rounded-full bg-[#5c35d4] -ml-1" />
-            </div>
+
+            {/* Underline */}
+            <div className="w-16 h-0.5 bg-[#5c35d4]" />
           </div>
 
           {/* Contact items */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6 mt-8">
             {[
               {
                 icon: <Phone size={18} />,
                 label: "TÉLÉPHONE",
-                value: "+225-07-00-000-000",
+                value: "+33 6 37 91 18 51",
               },
               {
                 icon: <Mail size={18} />,
                 label: "ADRESSE EMAIL",
-                value: "contact@nexsolve.io",
+                value: "contact@synexa.io",
               },
               {
                 icon: <MapPin size={18} />,
                 label: "LOCALISATION",
-                value: "Abidjan, Côte d'Ivoire",
+                value: "Paris, France",
               },
             ].map(({ icon, label, value }) => (
               <div key={label} className="flex items-center gap-4">
                 {/* Icon bubble */}
-                <div className="w-11 h-11 rounded-full bg-[#5c35d4] flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-[#5c35d4]/30">
+                <div
+                  className="
+                    w-11
+                    h-11
+                    rounded-full
+                    bg-[#5c35d4]
+                    flex
+                    items-center
+                    justify-center
+                    text-white
+                    shrink-0
+                    shadow-[0_0_12px_rgba(92,53,212,0.8),0_0_28px_rgba(92,53,212,0.45)]
+                  "
+                >
                   {icon}
                 </div>
+
                 {/* Text */}
                 <div className="flex flex-col">
-                  <span className="text-[0.7rem] text-[#8888aa] uppercase tracking-wider font-medium">
+                  <span
+                    className="
+                      text-[0.7rem]
+                      text-[#8888aa]
+                      uppercase
+                      tracking-wider
+                      font-medium
+                    "
+                  >
                     {label}
                   </span>
-                  <span className="text-[0.875rem] font-bold text-[#1a1a3e]">
+
+                  <span className="text-[0.875rem] font-bold text-[#1a1a3e] mt-1">
                     {value}
                   </span>
                 </div>
@@ -152,36 +219,67 @@ export const Footer = () => {
         </div>
 
         {/* ----------------------------------------
-              BLOC 4 — Get In Touch / Newsletter
+              BLOC 4 — Newsletter
            ----------------------------------------------- */}
-        <div className="flex flex-col gap-5 min-w-[280px]">
+        <div className="flex flex-col gap-5">
           {/* Heading */}
           <div>
-            <h3 className="text-[1rem] font-extrabold text-[#1a1a3e] uppercase tracking-widest mb-2">
+            <h3 className="text-[1rem] font-bold text-[#1a1a3e] uppercase tracking-widest mb-2">
               Restez Informé !
             </h3>
-            <div className="flex items-center gap-1">
-              <div className="w-16 h-[2px] bg-[#5c35d4]" />
-              <div className="w-2 h-2 rounded-full bg-[#5c35d4] -ml-1" />
-            </div>
+
+            {/* Underline */}
+            <div className="w-16 h-0.5 bg-[#5c35d4]" />
           </div>
 
           {/* Description */}
-          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-[270px]">
+          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-67.5 mt-8">
             Abonnez-vous à notre newsletter pour recevoir nos derniers articles,
             conseils tech et actualités IT directement dans votre boîte mail.
           </p>
 
           {/* Email input */}
-          <div className="flex items-center rounded-md overflow-hidden border border-[#cccde8] bg-white shadow-sm">
+          <div
+            className="
+              flex
+              items-center
+              rounded-md
+              overflow-hidden
+              bg-white
+              
+            "
+          >
             <input
               type="email"
               placeholder="Votre adresse email"
-              className="flex-1 px-4 py-3 text-[0.85rem] text-[#1a1a3e] bg-transparent outline-none placeholder-[#aaaacc]"
+              className="
+                flex-1
+                px-4
+                py-3
+                text-[0.85rem]
+                text-[#1a1a3e]
+                bg-transparent
+                outline-none
+                placeholder-[#aaaacc]
+                min-w-0
+              "
             />
+
             <button
               aria-label="S'abonner"
-              className="w-12 h-12 bg-[#5c35d4] flex items-center justify-center text-white hover:bg-[#4826bb] transition-colors duration-200 flex-shrink-0"
+              className="
+                w-12
+                h-12
+                bg-[#5c35d4]
+                flex
+                items-center
+                justify-center
+                text-white
+                hover:bg-[#4826bb]
+                transition-colors
+                duration-200
+                shrink-0
+              "
             >
               <Send size={16} />
             </button>
@@ -193,9 +291,9 @@ export const Footer = () => {
             Bottom Bar — Copyright
          ----------------------------------------------- */}
       <div className="w-full bg-[#5c35d4]">
-        <div className="max-w-[1400px] mx-auto px-8 py-4">
+        <div className="max-w-350 mx-auto px-6 sm:px-8 py-4">
           <p className="text-[0.8rem] text-white/90 font-medium">
-            Copyright © 2025 NexSolve. Tous droits réservés.
+            Copyright © 2025 SyneXa. All rights reserved | designed and developped by Sam Dev
           </p>
         </div>
       </div>

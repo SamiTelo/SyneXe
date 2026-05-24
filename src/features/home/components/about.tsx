@@ -1,11 +1,13 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle2, Apple } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   { label: "web | mobile développement" },
-  { label: "Stockage Cloud " },
+  { label: "Design UI/UX" },
   { label: "SEO Optimisé et performante" },
   { label: "Sécurité Renforcée" },
 ];
@@ -26,7 +28,7 @@ export const AboutSection = () => {
           <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-10">
             <div className="w-full max-w-3xl">
               <Image
-                src="/assets/about-img.png"
+                src="/assets/about-img-left.png"
                 alt="about"
                 width={600}
                 height={600}
@@ -56,7 +58,6 @@ export const AboutSection = () => {
             BLOC DROIT — Texte, features, CTA
         ----------------------------------------------- */}
         <div className="flex flex-col gap-6">
-          {/* Eyebrow */}
           {/* Badge */}
             <div
               className="flex justify-start"
@@ -72,7 +73,7 @@ export const AboutSection = () => {
             Plus de 14 Ans d&apos;Expérience
             <br />
             en{" "}
-            Solutions & Technologies IT
+            Solutions & <span className="text-indigo-600">Technologies IT</span>
           </h2>
 
           {/* Description */}
@@ -84,7 +85,7 @@ export const AboutSection = () => {
           </p>
 
           {/* Feature grid */}
-          <div className="grid grid-cols-2  gap-y-4 mt-2">
+          <div className="grid grid-cols-2  gap-y-4 my-2">
             {features.map((feature) => (
               <div key={feature.label} className="flex items-center gap-3">
                 <CheckCircle2
@@ -102,18 +103,27 @@ export const AboutSection = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="mt-4">
-            <button
-              className="inline-flex items-center gap-3 text-white text-sm font-semibold px-6 py-3 rounded-full transition hover:opacity-90 active:scale-95"
-              style={{ background: "#684df4" }}
-            >
-              <Apple size={18} className="shrink-0" />
-              <span className="border-l border-indigo-400 pl-3">
-                Télécharger l&apos;App
-              </span>
-            </button>
-          </div>
+           {/* CTA Button */}
+          <Link href="#competence">
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    y: -3,
+                    boxShadow: "0px 8px 15px rgba(0,0,0,0.15)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 10,
+                  }}
+                  className="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full md:text-[16px] text-sm"
+                >
+                  <ArrowUpRight size={20} />
+                  <span className="h-6 w-0.5 bg-primary-foreground/40 mx-1"></span>
+                  Nos meilleurs offres
+                </motion.div>
+              </Link>
         </div>
       </div>
     </section>

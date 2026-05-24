@@ -47,7 +47,7 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Title */}
-            <h1 className="font-bold text-[44px] sm:text-6xl md:text-7xl leading-tight text-center md:text-left text-foreground">
+            <h1 className="font-bold text-[44px] sm:text-6xl md:text-[68px] leading-tight text-center md:text-left text-foreground">
               Des solutions IT <span className="text-[#6C63D8]">robustes</span>{" "}
               et sûres
             </h1>
@@ -104,14 +104,14 @@ export const HeroSection = () => {
         {/* -------------------------------------------
             BLOC RIGHT: image
         ------------------------------------------------- */}
-        <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-10">
+        <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-22">
           <div className="w-full max-w-3xl">
             <Image
-              src="/assets/hero-img.png"
+              src="/assets/hero-img-right.png"
               alt="Hero"
               width={600}
               height={600}
-              className="w-145 h-auto sm:sm:w-120 md:w-145 md:h-140"
+              className="w-145 h-auto sm:sm:w-120 md:w-145 md:h-auto"
               priority
             />
           </div>
