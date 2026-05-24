@@ -4,49 +4,54 @@ import { Plus } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Sarah Kowalski",
+    name: "Marcus Diallo",
     role: "IT Solutions Architect",
-    image: "/images/team/sarah.jpg",
+    image: "/assets/team-1.png",
   },
   {
     id: 2,
-    name: "Marcus Diallo",
-    role: "Cloud & DevOps Engineer",
-    image: "/images/team/marcus.jpg",
+    name: "Sarah Kowalski",
+    role: "Desinger UI/UX",
+    image: "/assets/team-2.png",
   },
   {
     id: 3,
     name: "Elena Moretti",
     role: "Cybersecurity Expert",
-    image: "/images/team/elena.jpg",
+    image: "/assets/team.png",
   },
 ];
 
 export const TeamSection = () => {
   return (
-    <section className="relative w-full bg-[#f5f6fa] py-24 px-6 overflow-hidden">
+    <section className="relative w-full bg-white py-24 px-6 overflow-hidden">
+      {/*----------------------------------------------
+           Header
+      ----------------------------------------------*/}
+      <div className="text-center mb-22">
+        {/* Badge */}
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+            Services
+          </div>
+        </div>
+        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
+          Nos Meilleurs <span className="text-indigo-600">Teams</span>
+        </h2>
+      </div>
+
       {/*----------------------------------------------
            Background Decorative Shape
       ----------------------------------------------*/}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gray-200/60 rounded-br-[120px] pointer-events-none" />
+      <div className="absolute top-50 left-0 w-42 h-42 bg-gray-200/60 pointer-events-none"style={{
+              borderRadius: "62% 38% 46% 54% / 60% 44% 56% 40%",
+            }}
+ />
 
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------*/}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 gap-16">
-        {/* ----------------------------------------
-             Header Block
-        ---------------------------------------- */}
-        <div className="flex flex-col items-center text-center gap-3">
-          <span className="text-[#5b4fcf] text-xs font-semibold uppercase tracking-[0.2em]">
-            Notre Équipe
-          </span>
-          <h2 className="text-[#0f0f2d] text-4xl font-extrabold leading-tight">
-            Découvrez Nos Experts{" "}
-            <span className="text-[#5b4fcf]">Technologiques</span>
-          </h2>
-        </div>
-
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 gap-16 px-0 md:px-6">
         {/* ----------------------------------------
              Cards Grid Block
         ---------------------------------------- */}
@@ -87,7 +92,7 @@ export const TeamSection = () => {
               {/* ----------------------------------------
                    Info Block
               ---------------------------------------- */}
-              <div className="py-5 px-4 flex flex-col items-center gap-1">
+              <div className="py-8 px-4 flex flex-col items-center gap-2">
                 <h3 className="text-[#0f0f2d] text-lg font-bold">
                   {member.name}
                 </h3>

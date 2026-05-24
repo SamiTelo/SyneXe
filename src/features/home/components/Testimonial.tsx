@@ -15,9 +15,9 @@ const testimonials: Testimonial[] = [
     id: 1,
     quote:
       "Grâce à leur expertise en transformation digitale, nous avons réduit nos coûts opérationnels de 40%. Une agence qui comprend réellement les enjeux technologiques des entreprises modernes.",
-    name: "Ibrahim Al-Rashid",
+    name: "Sarah Foster",
     role: "CEO at TechVentures",
-    image: "/images/testimonials/client-1.jpg",
+    image: "/assets/client-2.png",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
       "Leur équipe a déployé notre infrastructure cloud en un temps record. La qualité des solutions IT proposées dépasse largement nos attentes initiales. Un partenaire de confiance.",
     name: "David Farnandes",
     role: "CTO at Innovatech",
-    image: "/images/testimonials/client-2.jpg",
+    image: "/assets/client-1.png",
     rating: 5,
   },
 ];
@@ -49,7 +49,25 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 export const TestimonialSection = () => {
   return (
-    <section className="relative w-full bg-white py-20 overflow-hidden">
+    <section className="relative w-full bg-white py-38 overflow-hidden">
+      {/*----------------------------------------------
+           Header
+      ----------------------------------------------*/}
+      <div className="text-center mb-22">
+        {/* Badge */}
+            <div
+              className="flex justify-center"
+            >
+              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+                Témoignages
+              </div>
+            </div>
+        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
+          Nos Avis{" "}
+          <span className="text-indigo-600">Clients</span>
+        </h2>
+      </div>
+
       {/* -----------------------------------------------
            Background Decorative Elements
       ----------------------------------------------- */}
@@ -117,19 +135,7 @@ export const TestimonialSection = () => {
       {/* -----------------------------------------------
            Main Content Grid
       ----------------------------------------------- */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-rows-[auto_1fr] gap-12">
-
-        {/* -----------------------------------------------
-             Header Block
-        ----------------------------------------------- */}
-        <div className="text-center grid gap-3">
-          <p className="text-[#6C4EF6] text-xs font-bold tracking-[0.2em] uppercase">
-            Avis Clients
-          </p>
-          <h2 className="text-[#0F0A2A] text-4xl font-extrabold leading-tight">
-            Ce Que Disent Nos Clients Satisfaits
-          </h2>
-        </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-rows-[auto_1fr] gap-12">
 
         {/* -----------------------------------------------
              Cards Grid
@@ -138,13 +144,13 @@ export const TestimonialSection = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(108,78,246,0.08)] border border-[#F0ECFF] p-6 grid grid-cols-[180px_1fr] gap-6 items-start overflow-visible"
+              className="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(108,78,246,0.08)] border border-[#F0ECFF] px-6 py-8 grid grid-cols-[180px_1fr] gap-6 items-start overflow-visible"
             >
               {/* -----------------------------------------------
                    Photo Block
               ----------------------------------------------- */}
               <div className="relative self-stretch">
-                <div className="relative w-[180px] h-[164px] rounded-xl overflow-hidden bg-gray-100">
+                <div className="relative w-45 h-41 rounded-xl overflow-hidden bg-gray-100">
                   <Image
                     src={t.image}
                     alt={t.name}
@@ -153,17 +159,13 @@ export const TestimonialSection = () => {
                     sizes="180px"
                   />
                 </div>
-
-                {/* Quote badge overlapping bottom-left of photo */}
-                <div className="absolute -bottom-3 -left-2 w-10 h-10 rounded-full bg-[#6C4EF6] flex items-center justify-center shadow-lg">
-                  <Quote className="w-4 h-4 text-white fill-white" strokeWidth={0} />
-                </div>
               </div>
 
               {/* -----------------------------------------------
                    Content Block
               ----------------------------------------------- */}
               <div className="grid grid-rows-[1fr_auto] gap-4 py-1">
+                <StarRating rating={t.rating}/>
                 {/* Quote text */}
                 <p className="text-[#6B7280] text-sm leading-relaxed">
                   {t.quote}
@@ -179,7 +181,10 @@ export const TestimonialSection = () => {
                       </p>
                       <p className="text-[#9CA3AF] text-xs mt-0.5">{t.role}</p>
                     </div>
-                    <StarRating rating={t.rating} />
+                     {/* Quote badge overlapping bottom-left of photo */}
+                <div className="absolute right-8 w-10 h-10 rounded-full bg-[#6C4EF6] flex items-center justify-center shadow-lg">
+                  <Quote className="w-4 h-4 text-white fill-white" strokeWidth={0} />
+                </div>
                   </div>
                 </div>
               </div>

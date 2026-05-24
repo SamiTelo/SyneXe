@@ -5,7 +5,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -44,7 +43,7 @@ export function SheetSide() {
                 <div className="flex items-center gap-2 font-bold tracking-wider">
                   <div className="-ml-6 md:ml-0 h-10 w-50 md:h-10 md:w-50 rounded-full relative">
                     <Image
-                      src="/assets/logo.svg"
+                      src="/assets/logo-black.svg"
                       alt="logo"
                       fill
                       className="object-contain"
@@ -52,58 +51,57 @@ export function SheetSide() {
                   </div>
                 </div>
               </SheetTitle>
-
-              <SheetDescription className="text-muted-foreground">
-                Solution & Technologies IT
-              </SheetDescription>
             </SheetHeader>
 
             {/* Main */}
-            <main>
-              <div className="hidden md:flex items-center gap-8 text-sm">
-                <a
-                  href="#hero"
-                  className="text-primary font-medium transition-colors"
-                >
-                  Home
-                </a>
+          <main>
+              <div className="flex flex-col gap-6 p-6 text-sm no-scrollbar overflow-y-auto px-6">
+               <a
+          href="#hero"
+          className="text-primary font-medium transition-colors"
+        >
+          Home
+        </a>
 
-                <a
-                  href="#about"
-                  className="hover:text-primary transition-colors"
-                >
-                  A propos
-                </a>
+        <a
+          href="#about"
+          className="hover:text-primary transition-colors"
+        >
+          A propos
+        </a>
 
-                <a
-                  href="#competence"
-                  className="hover:text-primary transition-colors"
-                >
-                  Services
-                </a>
+        <a
+          href="#competence"
+          className="hover:text-primary transition-colors"
+        >
+          Services
+        </a>
 
-                <a
-                  href="#experience"
-                  className="hover:text-primary transition-colors"
-                >
-                  Faqs
-                </a>
+        <a
+          href="#experience"
+          className="hover:text-primary transition-colors"
+        >
+          Faqs
+        </a>
 
-                <a
-                  href="#project"
-                  className="hover:text-primary transition-colors"
-                >
-                  Pricing
-                </a>
+        <a
+          href="#project"
+          className="hover:text-primary transition-colors"
+        >
+          Pricing
+        </a>
 
-                <a
-                  href="#contact"
-                  className="hover:text-primary transition-colors"
-                >
-                  Contact
-                </a>
+        <a
+          href="#contact"
+          className="hover:text-primary transition-colors"
+        >
+          Contact
+        </a>
+
+                <div className="border-t border-slate-200 mt-3 pt-3"></div>
               </div>
             </main>
+
 
             {/* Footer */}
             <SheetFooter>
@@ -112,15 +110,14 @@ export function SheetSide() {
                 download
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full h-10 px-6 py- text-sm font-semibold text-center transition-all bg-primary text-primary-foreground hover:bg-foreground hover:text-background"
+                className="rounded-full border h-10 px-6 py-2 text-sm font-semibold text-white text-center transition-all hover:bg-black bg-primary"
               >
-                Demander un devis
+                Download CV
               </a>
-
               <SheetClose asChild>
                 <Button
                   variant="outline"
-                  className="rounded-full h-10 px-6 py-2 border-border"
+                  className="rounded-full h-10 px-6 py-2"
                 >
                   Fermer
                 </Button>

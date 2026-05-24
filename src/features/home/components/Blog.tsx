@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { Calendar, MessageCircle, ArrowRight, LayoutGrid } from "lucide-react";
+import { Calendar, MessageCircle, LayoutGrid, ArrowUpRight } from "lucide-react";
 
 const articles = [
   {
     id: 1,
-    image: "/images/blog/blog-1.jpg",
-    date: "14 Mar, 2024",
+    image: "/assets/blog-3.png",
+    date: "14 Dec, 2025",
     comments: 5,
     title: "Comment optimiser l'infrastructure Cloud de votre entreprise ?",
     excerpt:
@@ -14,8 +14,8 @@ const articles = [
   },
   {
     id: 2,
-    image: "/images/blog/blog-2.jpg",
-    date: "02 Avr, 2024",
+    image: "/assets/blog-2.png",
+    date: "02 Janv, 2026",
     comments: 8,
     title: "Cybersécurité : Quels sont les défis du secteur IT en 2024 ?",
     excerpt:
@@ -24,8 +24,8 @@ const articles = [
   },
   {
     id: 3,
-    image: "/images/blog/blog-3.jpg",
-    date: "18 Avr, 2024",
+    image: "/assets/blog-1.png",
+    date: "18 Avr, 2026",
     comments: 3,
     title: "Intégration ERP & automatisation des processus métiers",
     excerpt:
@@ -36,24 +36,29 @@ const articles = [
 
 export const BlogSection = () => {
   return (
-    <section className="w-full bg-white py-20 px-6 relative overflow-hidden">
+    <section className="w-full pt-42 pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/bg-blog.png')]">
+       {/*----------------------------------------------
+           Header
+      ----------------------------------------------*/}
+      <div className="text-center mb-22">
+        {/* Badge */}
+            <div
+              className="flex justify-center"
+            >
+              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+                Blog
+              </div>
+            </div>
+        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
+          Nos Récent{" "}
+          <span className="text-indigo-600">Blog</span>
+        </h2>
+      </div>
 
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
-      <div className="grid grid-cols-1 gap-12 max-w-6xl mx-auto">
-
-        {/* ----------------------------------------
-              BLOC — Section Header
-           ----------------------------------------------- */}
-        <div className="grid grid-cols-1 text-center gap-3">
-          <span className="text-[#5B4EE8] text-xs font-semibold tracking-[0.2em] uppercase">
-            Actualités & Articles
-          </span>
-          <h2 className="text-gray-900 text-4xl font-extrabold leading-tight">
-            Restez Informé de Toutes Nos Actualités IT
-          </h2>
-        </div>
+      <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto px-0 md:px-6">
 
         {/* ----------------------------------------
               BLOC — Articles Grid (3 colonnes)
@@ -62,15 +67,15 @@ export const BlogSection = () => {
           {articles.map((article) => (
             <div
               key={article.id}
-              className="grid grid-rows-[auto_1fr] bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="grid grid-rows-[auto_1fr] bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden"
             >
               {/* ---- Image ---- */}
-              <div className="relative w-full h-52 overflow-hidden">
+              <div className="relative w-full h-72 overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover"
+                  className="object-cover p-6 rounded-4xl"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -106,10 +111,9 @@ export const BlogSection = () => {
                     <LayoutGrid className="w-4 h-4 text-[#5B4EE8]" />
                     {article.author}
                   </span>
-                  <button className="flex items-center gap-1.5 text-xs font-semibold text-gray-800 hover:text-[#5B4EE8] tracking-wide uppercase transition-colors duration-200">
-                    Lire Plus
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 text-gray-400 hover:bg-indigo-600 hover:border-indigo-600 hover:text-white transition-all duration-300 cursor-pointer">
+                  <ArrowUpRight size={15} />
+                </span>
                 </div>
 
               </div>

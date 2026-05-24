@@ -23,8 +23,8 @@ export const HomeView = () => {
         Main content
       ---------------------------- */}
       <main>
-        <HeroSection />
-        <AboutSection />
+        <HeroSection/>
+        <AboutSection/>
         <CounterSection/>
         <ServiceSection/>
         <PartnersSection/>

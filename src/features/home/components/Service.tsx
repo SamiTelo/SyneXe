@@ -6,7 +6,7 @@ import { ArrowUpRight, Code2, Palette, BarChart3 } from "lucide-react";
 const projects = [
   {
     id: 1,
-    image: "/images/web-development.jpg",
+    image: "/assets/web2.png",
     alt: "Web Development - Agence IT",
     icon: Code2,
     title: "Développement Web",
@@ -15,16 +15,16 @@ const projects = [
   },
   {
     id: 2,
-    image: "/images/website-design.jpg",
+    image: "/assets/mobile.png",
     alt: "Website Design - Agence IT",
     icon: Palette,
-    title: "Design UI/UX",
+    title: "Développement Mobile",
     description:
       "Nous créons des interfaces modernes, intuitives et centrées utilisateur. Chaque pixel est pensé pour maximiser l'expérience digitale et renforcer l'identité visuelle de votre marque.",
   },
   {
     id: 3,
-    image: "/images/seo-optimization.jpg",
+    image: "/assets/seo.png",
     alt: "SEO Optimization - Agence IT",
     icon: BarChart3,
     title: "Optimisation SEO",
@@ -35,34 +35,40 @@ const projects = [
 
 export const ServiceSection = () => {
   return (
-    <section className="w-full bg-white py-20 px-4 md:px-8 lg:px-16">
+    <section className="w-full bg-white pb-46 pt-42 x-4 md:px-8 lg:px-16">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-14">
-        <span className="text-sm font-semibold tracking-widest text-indigo-600 uppercase">
-          Projets
-        </span>
-        <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
-          Nos Derniers{" "}
-          <span className="text-indigo-600">Projets Récents</span>
+      <div className="text-center mb-22">
+        {/* Badge */}
+            <div
+              className="flex justify-center"
+            >
+              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+                Services
+              </div>
+            </div>
+        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
+          Nos Meilleurs{" "}
+          <span className="text-indigo-600">Service</span>
         </h2>
       </div>
+ 
 
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------*/}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-0 md:px-6">
         {/* ----------------------------------------
             BLOCS
         ---------------------------------------- */}
-        {projects.map(({ id, image, alt, icon: Icon, title, description }) => (
+        {projects.map(({ id, image, alt, title, description }) => (
           <div
             key={id}
-            className="group flex flex-col rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 bg-white"
+            className="group flex flex-col rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white"
           >
             {/* Image */}
-            <div className="relative w-full h-[240px] overflow-hidden">
+            <div className="relative w-full h-h-60 overflow-hidden">
               <Image
                 src={image}
                 alt={alt}
@@ -73,13 +79,10 @@ export const ServiceSection = () => {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col flex-1 p-6 gap-3">
+            <div className="flex flex-col flex-1 px-6 pt-10 pb-12 gap-3">
               {/* Icon + Title */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600">
-                    <Icon size={18} strokeWidth={2} />
-                  </div>
                   <h3 className="text-lg font-bold text-gray-900">{title}</h3>
                 </div>
                 <span className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 text-gray-400 group-hover:bg-indigo-600 group-hover:border-indigo-600 group-hover:text-white transition-all duration-300 cursor-pointer">
@@ -94,7 +97,7 @@ export const ServiceSection = () => {
             </div>
 
             {/* Bottom accent bar */}
-            <div className="h-[3px] w-0 group-hover:w-full bg-indigo-600 transition-all duration-500 rounded-b-2xl" />
+            <div className="h-0.75 w-0 group-hover:w-full bg-indigo-600 transition-all duration-500 rounded-b-2xl" />
           </div>
         ))}
       </div>
