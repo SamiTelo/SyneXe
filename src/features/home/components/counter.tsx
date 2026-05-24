@@ -57,7 +57,7 @@ export const CounterSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="w-full bg-white py-6 px-4 lg:px-16">
+    <section id="counter" className="w-full bg-white py-2 md:py-6 px-4 lg:px-16">
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
@@ -91,7 +91,7 @@ export const CounterSection = () => {
                   suffix={stat.suffix}
                   inView={inView}
                 />
-                <p className="mt-4 text-xs font-bold uppercase tracking-widest text-indigo-200">
+                <p className="mt-4 text-xs font-bold md:uppercase tracking-widest text-indigo-200">
                   {stat.label}
                 </p>
               </motion.div>

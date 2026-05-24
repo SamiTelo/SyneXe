@@ -9,7 +9,7 @@ import {
 
 export const Footer = () => {
   return (
-    <section className="w-full bg-[#e8eaf6] overflow-hidden">
+    <section id="footer" className="w-full bg-[#e8eaf6] overflow-hidden">
       {/*-------------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
@@ -19,7 +19,8 @@ export const Footer = () => {
           mx-auto
           px-6
           sm:px-8
-          py-36
+          py-20
+          md:py-36
           grid
           grid-cols-1
           sm:grid-cols-2
@@ -49,7 +50,7 @@ export const Footer = () => {
           </div>
 
           {/* Tagline */}
-          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-65">
+          <p className="sm:text-[16px] md:text-[16px] text-sm text-[#6b6b8a] leading-relaxed max-w-65">
             Nous transformons vos défis numériques en solutions performantes.
             Expertise, innovation et agilité au service de votre croissance IT.
           </p>
@@ -233,7 +234,7 @@ export const Footer = () => {
           </div>
 
           {/* Description */}
-          <p className="text-[0.875rem] text-[#6b6b8a] leading-relaxed max-w-67.5 mt-8">
+          <p className="sm:text-[16px] md:text-[16px] text-sm text-[#6b6b8a] leading-relaxed max-w-67.5 mt-8">
             Abonnez-vous à notre newsletter pour recevoir nos derniers articles,
             conseils tech et actualités IT directement dans votre boîte mail.
           </p>
@@ -292,8 +293,8 @@ export const Footer = () => {
          ----------------------------------------------- */}
       <div className="w-full bg-[#5c35d4]">
         <div className="max-w-350 mx-auto px-6 sm:px-8 py-4">
-          <p className="text-[0.8rem] text-white/90 font-medium">
-            Copyright © 2025 SyneXa. All rights reserved | designed and developped by Sam Dev
+          <p className="text-[0.8rem] text-white/90 text-center ml-0 md:ml-10 sm:text-center md:text-left font-medium">
+            Copyright © 2025 SyneXa | All rights reserved | designed and developped by Sam Dev
           </p>
         </div>
       </div>

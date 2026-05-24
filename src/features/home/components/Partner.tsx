@@ -42,7 +42,7 @@ const partners = [
 
 export const PartnersSection = () => {
   return (
-    <section className="relative w-full bg-white overflow-hidden pb-46 pt-18 px-4 md:px-8 lg:px-16">
+    <section id="partner" className="relative w-full bg-white overflow-hidden pb-50 pt-0 md:pb-46 md:pt-18 px-4 md:px-8 lg:px-16">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}

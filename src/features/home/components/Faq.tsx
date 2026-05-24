@@ -19,7 +19,7 @@ const faqs: FaqItem[] = [
     id: "faq-1",
     question: "Comment puis-je obtenir une assistance technique IT ?",
     answer:
-      "Notre équipe d'experts est disponible 24h/24 et 7j/7 pour vous accompagner. Nous proposons un support multi-canal : ticketing, téléphone et intervention sur site. Chaque demande est traitée selon un SLA défini pour garantir une résolution rapide et efficace de vos incidents.",
+      "Notre équipe d'experts est disponible 24h/24 et 7j/7 pour vous accompagner. Nous proposons un support multi-canal : ticketing, téléphone et intervention sur site. Demande est traitée pour garantir une résolution rapide.",
   },
   {
     id: "faq-2",
@@ -37,7 +37,7 @@ const faqs: FaqItem[] = [
 
 export const FaqSection = () => {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-26">
+    <section id="faq" className="relative w-full bg-white overflow-hidden py-26">
       {/*----------------------------------------------
            Background: Circuit Board SVG
       ----------------------------------------------*/}
@@ -49,7 +49,7 @@ export const FaqSection = () => {
       {/*----------------------------------------------
            Main Content Grid — Left | Right
       ----------------------------------------------*/}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-30 md:gap-10 items-center">
         {/* ----------------------------------------
              LEFT BLOC — Header + Accordion
         ---------------------------------------- */}
@@ -71,7 +71,7 @@ export const FaqSection = () => {
           <span className="text-indigo-600">Questions</span>
         </h2>
             {/* Description */}
-          <p className="text-gray-500 text-base leading-relaxed max-w-lg">
+          <p className="text-gray-500 sm:text-[16px] md:text-[16px] text-sm leading-relaxed max-w-lg">
             Nous concevons des architectures numériques robustes et évolutives
             pour accompagner la transformation digitale de votre entreprise.
             Notre expertise couvre l&apos;intégration cloud et
@@ -121,7 +121,7 @@ export const FaqSection = () => {
                   </span>
                 </AccordionTrigger>
 
-                <AccordionContent className="px-5 pt-4 pb-5 text-sm text-[#6B7280] leading-relaxed border border-[#E5E7EB]">
+                <AccordionContent className="px-5 pt-4 pb-6 text-sm text-[#6B7280] leading-relaxed border border-[#E5E7EB]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
