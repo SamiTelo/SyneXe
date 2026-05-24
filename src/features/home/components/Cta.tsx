@@ -2,11 +2,11 @@ import { ArrowUpRight } from "lucide-react";
 
 export const CtaSection = () => {
   return (
-    <section className="w-full bg-white px-6 py-30">
+    <section id="cta" className="w-full bg-white px-6 py-10 md:py-30">
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
-      <div className="grid grid-cols-1 max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 max-w-7xl mx-auto px-0 md:px-6">
         {/* ----------------------------------------
               BLOC — CTA Card
            ----------------------------------------------- */}
@@ -18,12 +18,12 @@ export const CtaSection = () => {
         <div className="absolute inset-0 z-0 pointer-events-none bg-contan bg-no-repeat bg-center bg-[url('/assets/counter-bg.svg')]"></div>
 
           {/* Heading */}
-          <h2 className="text-white text-4xl font-bold leading-tight w-fit">
+          <h2 className="text-white text-3xl md:text-4xl font-bold leading-tight w-fit">
             Propulsez Votre Entreprise avec Nos Solutions IT !
           </h2>
 
           {/* Description */}
-          <p className="text-white/80 text-sm leading-relaxed w-fit px-20">
+          <p className="text-white/80 sm:text-[16px] md:text-[16px] text-sm leading-relaxed w-fit px-0 md:px-20">
             Faites passer votre infrastructure au niveau supérieur grâce à nos solutions technologiques
             sur mesure. Que vous ayez besoin d&apos;une performance optimale, de ressources dédiées ou
             d&apos;une flexibilité totale pour piloter vos systèmes, nous avons la réponse adaptée à

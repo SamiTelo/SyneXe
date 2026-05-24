@@ -36,7 +36,7 @@ const articles = [
 
 export const BlogSection = () => {
   return (
-    <section className="w-full pt-42 pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/bg-blog.png')]">
+    <section id="blog" className="w-full pt-30 pb-40 md:pt-42 md:pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/bg-blog.png')]">
        {/*----------------------------------------------
            Header
       ----------------------------------------------*/}

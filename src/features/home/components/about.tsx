@@ -14,21 +14,21 @@ const features = [
 
 export const AboutSection = () => {
   return (
-    <section className="w-full bg-white pb-40 -mt-20 sm:-mt-20 md:mt-0  px-6 lg:px-16">
+    <section id="about" className="w-full bg-white pb-30 md:pb-40 -mt-20 sm:-mt-20 md:mt-0  px-6 lg:px-16">
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-28 md:gap-20 items-center">
         {/* ----------------------------------------
             BLOC GAUCHE — Image avec badge
         ----------------------------------------------- */}
-        <div className="relative flex items-center justify-center pr-6">
+        <div className="relative flex items-center justify-center pr-0 md:pr-6 order-2 md:order-1">
           <div className="absolute inset-0 z-0" />
 
           <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-10">
             <div className="w-full max-w-3xl">
               <Image
-                src="/assets/about-img-left.png"
+                src="/assets/about-image.png"
                 alt="about"
                 width={600}
                 height={600}
@@ -57,7 +57,7 @@ export const AboutSection = () => {
         {/* ----------------------------------------
             BLOC DROIT — Texte, features, CTA
         ----------------------------------------------- */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 order-1 md:order-2">
           {/* Badge */}
             <div
               className="flex justify-start"
@@ -69,7 +69,7 @@ export const AboutSection = () => {
 
 
           {/* Heading */}
-          <h2 className="text-[38px] font-bold text-gray-900 leading-snug">
+          <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 leading-snug">
             Plus de 14 Ans d&apos;Expérience
             <br />
             en{" "}
@@ -77,7 +77,7 @@ export const AboutSection = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-gray-500 text-base leading-relaxed max-w-lg">
+          <p className="text-gray-500 sm:text-[16px] md:text-[16px] text-sm leading-relaxed max-w-lg">
             Nous concevons des architectures numériques robustes et évolutives
             pour accompagner la transformation digitale de votre entreprise.
             Notre expertise couvre l&apos;intégration cloud, la cybersécurité et
@@ -85,7 +85,7 @@ export const AboutSection = () => {
           </p>
 
           {/* Feature grid */}
-          <div className="grid grid-cols-2  gap-y-4 my-2">
+          <div className="grid grid-cols-2  gap-y-4 my-4 md:my-2">
             {features.map((feature) => (
               <div key={feature.label} className="flex items-center gap-3">
                 <CheckCircle2
@@ -117,7 +117,7 @@ export const AboutSection = () => {
                     stiffness: 200,
                     damping: 10,
                   }}
-                  className="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full md:text-[16px] text-sm"
+                  className="w-fit md:w-auto inline-flex justify-center items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full md:text-[16px] text-sm"
                 >
                   <ArrowUpRight size={20} />
                   <span className="h-6 w-0.5 bg-primary-foreground/40 mx-1"></span>

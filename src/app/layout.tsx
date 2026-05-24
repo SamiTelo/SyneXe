@@ -4,7 +4,7 @@ import CursorProvider from "@/components/cursor/CursorProvider";
 
 
 export const metadata: Metadata = {
-  title: "SyneXa | Solution & Technologies IT Performantes",
+  title: "SyneXa | Solution IT & Technologies IT Performantes",
   description: "Solution & Technologies IT Performantes",
 };
 

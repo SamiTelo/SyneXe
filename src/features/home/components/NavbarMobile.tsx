@@ -5,6 +5,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -51,57 +52,58 @@ export function SheetSide() {
                   </div>
                 </div>
               </SheetTitle>
+              <SheetDescription className="mt-6 text-sm">
+                Nous transformons vos défis numériques en solutions
+                performantes. Expertise, innovation et agilité au service de
+                votre croissance IT.
+              </SheetDescription>
             </SheetHeader>
 
             {/* Main */}
-          <main>
+            <main>
               <div className="flex flex-col gap-6 p-6 text-sm no-scrollbar overflow-y-auto px-6">
-               <a
-          href="#hero"
-          className="text-primary font-medium transition-colors"
-        >
-          Home
-        </a>
+                <a
+                  href="#hero"
+                  className="text-primary font-medium transition-colors"
+                >
+                  Home
+                </a>
 
-        <a
-          href="#about"
-          className="hover:text-primary transition-colors"
-        >
-          A propos
-        </a>
+                <a
+                  href="#about"
+                  className="hover:text-primary transition-colors"
+                >
+                  A propos
+                </a>
 
-        <a
-          href="#competence"
-          className="hover:text-primary transition-colors"
-        >
-          Services
-        </a>
+                <a
+                  href="#service"
+                  className="hover:text-primary transition-colors"
+                >
+                  Services
+                </a>
 
-        <a
-          href="#experience"
-          className="hover:text-primary transition-colors"
-        >
-          Faqs
-        </a>
+                <a href="#faq" className="hover:text-primary transition-colors">
+                  Faqs
+                </a>
 
-        <a
-          href="#project"
-          className="hover:text-primary transition-colors"
-        >
-          Pricing
-        </a>
+                <a
+                  href="#pricing"
+                  className="hover:text-primary transition-colors"
+                >
+                  Prix
+                </a>
 
-        <a
-          href="#contact"
-          className="hover:text-primary transition-colors"
-        >
-          Contact
-        </a>
+                <a
+                  href="#contact"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact
+                </a>
 
                 <div className="border-t border-slate-200 mt-3 pt-3"></div>
               </div>
             </main>
-
 
             {/* Footer */}
             <SheetFooter>
@@ -110,9 +112,9 @@ export function SheetSide() {
                 download
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border h-10 px-6 py-2 text-sm font-semibold text-white text-center transition-all hover:bg-black bg-primary"
+                className="rounded-full border h-10 px-6 py-2.5 text-sm font-semibold text-white text-center transition-all hover:bg-black bg-primary"
               >
-                Download CV
+                Demander un devis
               </a>
               <SheetClose asChild>
                 <Button

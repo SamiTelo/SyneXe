@@ -35,7 +35,7 @@ const projects = [
 
 export const ServiceSection = () => {
   return (
-    <section className="w-full bg-white pb-46 pt-42 x-4 md:px-8 lg:px-16">
+    <section id="service" className="w-full bg-white pb-38 pt-28 md:pb-46 md:pt-42 px-6 md:px-8 lg:px-16">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
@@ -58,7 +58,7 @@ export const ServiceSection = () => {
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------*/}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-0 md:px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 max-w-7xl mx-auto px-0 md:px-6">
         {/* ----------------------------------------
             BLOCS
         ---------------------------------------- */}
@@ -68,7 +68,7 @@ export const ServiceSection = () => {
             className="group flex flex-col rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white"
           >
             {/* Image */}
-            <div className="relative w-full h-h-60 overflow-hidden">
+            <div className="relative w-full h-60 overflow-hidden">
               <Image
                 src={image}
                 alt={alt}

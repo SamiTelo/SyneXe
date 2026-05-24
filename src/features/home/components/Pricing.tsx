@@ -55,7 +55,7 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section className="w-full bg-white py-28 px-6">
+    <section id="pricing" className="w-full bg-white py-28 px-6">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
@@ -77,7 +77,7 @@ export const PricingSection = () => {
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------*/}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-14 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-14 px-O md:px-6">
 
         {/* ----------------------------------------
              Cards Grid Block

@@ -9,7 +9,7 @@ export const NavBar = () => {
       <div className="flex items-center gap-2 font-bold tracking-wider">
         <div className="-ml-6 md:ml-0 h-10 w-50 md:h-10 md:w-50 rounded-full relative">
           <Image
-            src="/assets/logo.svg"
+            src="/assets/logo-nav.svg"
             alt="logo"
             fill
             className="object-contain"
@@ -35,24 +35,24 @@ export const NavBar = () => {
         </a>
 
         <a
-          href="#competence"
+          href="#service"
           className="hover:text-primary transition-colors"
         >
           Services
         </a>
 
         <a
-          href="#experience"
+          href="#faq"
           className="hover:text-primary transition-colors"
         >
           Faqs
         </a>
 
         <a
-          href="#project"
+          href="#pricing"
           className="hover:text-primary transition-colors"
         >
-          Pricing
+          Prix
         </a>
 
         <a

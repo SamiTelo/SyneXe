@@ -9,12 +9,12 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative w-full px-6 sm:px-10 pb-32 -top-48 lg:px-20 sm:pb-38 md:pb-38 md:pt-32 pt-52 bg-cover bg-center bg-[url('/assets/hero-bg.png')]"
+      className="relative w-full px-6 sm:px-10 pb-32 -top-48 lg:px-20 sm:pb-38 md:pb-38 md:pt-32 pt-56 bg-cover bg-center bg-[url('/assets/hero-bg.png')]"
     >
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------------*/}
-      <div className="max-w-7xl mx-auto gap-0 sm:gap-20 md:gap-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1.3fr] items-center md:mt-20">
+      <div className="max-w-7xl mx-auto gap-18 sm:gap-20 md:gap-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1.3fr] items-center md:mt-20">
 
         {/* ----------------------------------------
             BLOC LEFT: Text Presentation
@@ -107,7 +107,7 @@ export const HeroSection = () => {
         <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-22">
           <div className="w-full max-w-3xl">
             <Image
-              src="/assets/hero-img-right.png"
+              src="/assets/hero-image.png"
               alt="Hero"
               width={600}
               height={600}

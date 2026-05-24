@@ -24,7 +24,7 @@ const teamMembers = [
 
 export const TeamSection = () => {
   return (
-    <section className="relative w-full bg-white py-24 px-6 overflow-hidden">
+    <section id="team" className="relative w-full bg-white py-10 md:py-24 px-6 overflow-hidden">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}

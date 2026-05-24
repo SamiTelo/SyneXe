@@ -49,7 +49,7 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 export const TestimonialSection = () => {
   return (
-    <section className="relative w-full bg-white py-38 overflow-hidden">
+    <section id="testimonial" className="relative w-full bg-white py-18 md:py-38 overflow-hidden">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
@@ -144,7 +144,7 @@ export const TestimonialSection = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(108,78,246,0.08)] border border-[#F0ECFF] px-6 py-8 grid grid-cols-[180px_1fr] gap-6 items-start overflow-visible"
+              className="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(108,78,246,0.08)] border border-[#F0ECFF] px-6 py-8 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-6 items-start overflow-visible"
             >
               {/* -----------------------------------------------
                    Photo Block
