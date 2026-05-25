@@ -169,7 +169,7 @@ export const Footer = () => {
               {
                 icon: <Mail size={18} />,
                 label: "ADRESSE EMAIL",
-                value: "contact@synexa.io",
+                value: "contactsynexa7@gmail.com",
               },
               {
                 icon: <MapPin size={18} />,
@@ -294,7 +294,7 @@ export const Footer = () => {
       <div className="w-full bg-[#5c35d4]">
         <div className="max-w-350 mx-auto px-6 sm:px-8 py-4">
           <p className="text-[0.8rem] text-white/90 text-center ml-0 md:ml-10 sm:text-center md:text-left font-medium">
-            Copyright © 2025 SyneXa | All rights reserved | designed and developped by Sam Dev
+            Copyright © 2025 SyneXa - All rights reserved | <a href="https://sam-dev-portfolio-one.vercel.app/" className="font-extrabold">Sam Dev</a>
           </p>
         </div>
       </div>

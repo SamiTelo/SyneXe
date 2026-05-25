@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowUpRight, Code2, Palette, BarChart3 } from "lucide-react";
 
-const projects = [
+const services = [
   {
     id: 1,
     image: "/assets/web2.png",
@@ -49,8 +49,8 @@ export const ServiceSection = () => {
               </div>
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Meilleurs{" "}
-          <span className="text-indigo-600">Service</span>
+          Propulsez votre{" "}
+          <span className="text-indigo-600">activité</span>
         </h2>
       </div>
  
@@ -62,7 +62,7 @@ export const ServiceSection = () => {
         {/* ----------------------------------------
             BLOCS
         ---------------------------------------- */}
-        {projects.map(({ id, image, alt, title, description }) => (
+        {services.map(({ id, image, alt, title, description }) => (
           <div
             key={id}
             className="group flex flex-col rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white"

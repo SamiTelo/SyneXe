@@ -5,50 +5,54 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 const plans = [
   {
     id: 1,
-    name: "Basic Package",
-    description: "Plan tarifaire pour agence IT & solutions technologiques",
-    price: "199.00",
+    name: "Starter Pack",
+    description:
+      "Idéal pour les petites entreprises, startups et projets de lancement.",
+    price: "249",
     features: [
-      "30 Jours d'essai gratuit",
-      "Fonctionnalités illimitées",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
+      "Site vitrine moderne et responsive",
+      "Jusqu’à 5 pages incluses",
+      "Optimisation SEO de base",
+      "Design UI/UX personnalisé",
+      "Formulaire de contact sécurisé",
+      "Intégration WhatsApp & réseaux sociaux",
+      "Hébergement & nom de domaine inclus (1 an)",
+      "Support technique pendant 30 jours",
     ],
   },
+
   {
     id: 2,
-    name: "Standard Package",
-    description: "Plan tarifaire pour agence IT & solutions technologiques",
-    price: "299.00",
+    name: "Business Pack",
+    description: "Solution complète pour développer votre présence digitale.",
+    price: "499",
     features: [
-      "30 Jours d'essai gratuit",
-      "Fonctionnalités illimitées",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
+      "Application web ou site professionnel",
+      "Jusqu’à 10 pages dynamiques",
+      "Tableau de bord administrateur",
+      "Optimisation SEO avancée",
+      "Performance & sécurité renforcées",
+      "Intégration API & base de données",
+      "Responsive mobile & tablette",
+      "Support technique pendant 3 mois",
     ],
   },
+
   {
     id: 3,
-    name: "Premium Package",
-    description: "Plan tarifaire pour agence IT & solutions technologiques",
-    price: "399.00",
+    name: "Enterprise Pack",
+    description:
+      "Offre premium pour entreprises et plateformes à grande échelle.",
+    price: "999",
     features: [
-      "30 Jours d'essai gratuit",
-      "Fonctionnalités illimitées",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
-      "Support multi-langues",
-      "Sauvegarde & restauration des données",
-      "Synchronisation Cloud Database",
+      "Développement web & mobile sur mesure",
+      "Architecture scalable et sécurisée",
+      "Système d’authentification avancé",
+      "Intégration Cloud & services tiers",
+      "Optimisation SEO & performances premium",
+      "Maintenance et monitoring inclus",
+      "Support prioritaire 24/7",
+      "Accompagnement technique personnalisé",
     ],
   },
 ];
@@ -61,16 +65,13 @@ export const PricingSection = () => {
       ----------------------------------------------*/}
       <div className="text-center mb-22">
         {/* Badge */}
-            <div
-              className="flex justify-center"
-            >
-              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-                Prix
-              </div>
-            </div>
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+            Prix
+          </div>
+        </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Différents{" "}
-          <span className="text-indigo-600">Offres</span>
+          Nos Différents <span className="text-indigo-600">Offres</span>
         </h2>
       </div>
 
@@ -78,11 +79,10 @@ export const PricingSection = () => {
            Main Content Grid
       ----------------------------------------------*/}
       <div className="max-w-7xl mx-auto grid grid-cols-1 gap-14 px-O md:px-6">
-
         {/* ----------------------------------------
              Cards Grid Block
         ---------------------------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6">
           {plans.map((plan) => (
             <div
               key={plan.id}
@@ -108,7 +108,7 @@ export const PricingSection = () => {
               {/* ----------------------------------------
                    Price Block (dark)
               ---------------------------------------- */}
-              <div className="bg-[#0f172a] border-t border-white/10 px-7 py-5">
+              <div className="bg-[#0f172a] border-t border-white/10 px-7 py-6">
                 <div className="flex items-baseline gap-1">
                   <span className="text-white text-3xl font-extrabold">
                     ${plan.price}
@@ -139,15 +139,20 @@ export const PricingSection = () => {
 
                 {/* CTA Button */}
                 <div className="mt-auto pt-2">
-                  <button
-              className="inline-flex items-center gap-3 text-white text-sm px-6 py-4 rounded-full transition hover:opacity-90 active:scale-95"
-              style={{ background: "#111827" }}
-            >
-              <ArrowUpRight size={18} className="shrink-0" />
-              <span className="border-l border-white pl-3">
-                Souscrire Maintenant
-              </span>
-            </button>
+                  <a
+                    href={`mailto:contactsynexa7@gmail.com?subject=${encodeURIComponent(
+                      "Demande de devis",
+                    )}&body=${encodeURIComponent(
+                      "Bonjour, je souhaite obtenir un devis ou un forfait pour vos services.",
+                    )}`}
+                    className="inline-flex items-center gap-3 text-white text-sm px-6 py-4 rounded-full transition hover:opacity-90 active:scale-95"
+                    style={{ background: "#111827" }}
+                  >
+                    <ArrowUpRight size={18} className="shrink-0" />
+                    <span className="border-l border-white pl-3">
+                      Souscrire Maintenant
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>

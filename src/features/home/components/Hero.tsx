@@ -40,9 +40,9 @@ export const HeroSection = () => {
             >
               <div className="inline-flex items-center gap-3 bg-accent text-primary pl-1.5 pr-6 py-1 mb-6 rounded-full text-sm font-medium">
                 <span className="bg-background text-foreground px-6 py-3 rounded-full">
-                  News
+                  Nouveau
                 </span>
-                IT services & technologies
+                Solutions & Technologies
               </div>
             </motion.div>
 
@@ -87,14 +87,14 @@ export const HeroSection = () => {
               </Link>
 
               {/* Secondary Button */}
-              <button className="flex items-center gap-3 text-foreground font-medium group">
+              <button className="flex items-center gap-3 text-foreground font-medium md:text-[16px] text-sm group">
                 <span className="w-15 h-15 flex items-center justify-center rounded-full bg-background border border-border hover:border-primary text-primary transition">
                   <Play size={18} />
                 </span>
 
-                <span className="text-left">
-                  View <br />
-                  Case Studies
+                <span className="text-left ">
+                  Vidéo <br />
+                   de Presentation
                 </span>
               </button>
             </div>

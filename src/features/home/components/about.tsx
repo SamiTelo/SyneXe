@@ -47,8 +47,8 @@ export const AboutSection = () => {
               height: "120px",
             }}
           >
-            <span className="text-2xl font-extrabold leading-tight">10k+</span>
-            <span className="text-sm font-normal text-indigo-200 leading-tight text-center px-2">
+            <span className="text-2xl font-extrabold leading-tight">10 k</span>
+            <span className="text-sm font-normal text-indigo-200 leading-tight text-center px-2 mt-0 md:mt-1">
               Clients Actifs
             </span>
           </div>
@@ -96,7 +96,7 @@ export const AboutSection = () => {
                   strokeWidth={2}
                   stroke="white"
                 />
-                <span className="text-gray-700 font-medium text-sm">
+                <span className="text-gray-700 font-medium text-xs md:text-sm">
                   {feature.label}
                 </span>
               </div>

@@ -10,7 +10,7 @@ const articles = [
     title: "Comment optimiser l'infrastructure Cloud de votre entreprise ?",
     excerpt:
       "Découvrez les meilleures pratiques pour migrer vers le cloud, réduire vos coûts d'exploitation et garantir la haute disponibilité de vos systèmes critiques.",
-    author: "Par SolTech",
+    author: "Par SyneXa",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const articles = [
     title: "Cybersécurité : Quels sont les défis du secteur IT en 2024 ?",
     excerpt:
       "Les cybermenaces évoluent rapidement. Nos experts analysent les nouvelles vulnérabilités et les stratégies de défense adaptées aux PME et grandes entreprises.",
-    author: "Par SolTech",
+    author: "Par SyneXa",
   },
   {
     id: 3,
@@ -30,13 +30,13 @@ const articles = [
     title: "Intégration ERP & automatisation des processus métiers",
     excerpt:
       "L'automatisation intelligente transforme la productivité des organisations. Découvrez comment nos solutions ERP sur mesure s'adaptent à vos flux de travail.",
-    author: "Par SolTech",
+    author: "Par SyneXa",
   },
 ];
 
 export const BlogSection = () => {
   return (
-    <section id="blog" className="w-full pt-30 pb-40 md:pt-42 md:pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/bg-blog.png')]">
+    <section id="blog " className="w-full pt-30 pb-40 md:pt-42 md:pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/blog-background.png')]">
        {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
@@ -75,7 +75,7 @@ export const BlogSection = () => {
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover p-6 rounded-4xl"
+                  className="object-cover p-4 md:p-6 rounded-3xl md:rounded-4xl"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>

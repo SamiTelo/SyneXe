@@ -57,7 +57,7 @@ export const CounterSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="counter" className="w-full bg-white py-2 md:py-6 px-4 lg:px-16">
+    <section id="counter" className="w-full bg-white py-2 md:py-6 px-6 lg:px-16">
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
@@ -81,7 +81,7 @@ export const CounterSection = () => {
             <div key={stat.label} className="flex items-stretch">
               {/* Stat bloc */}
               <motion.div
-                className="flex flex-col items-center justify-center text-center flex-1 py-4 px-4"
+                className="flex flex-col items-center justify-center text-center flex-1 py-6 md:py-4 px-4"
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
