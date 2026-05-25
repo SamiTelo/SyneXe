@@ -70,7 +70,7 @@ export const AboutSection = () => {
 
           {/* Heading */}
           <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 leading-snug">
-            Plus de 14 Ans d&apos;Expérience
+            Plus de 15 Ans d&apos;Expérience
             <br />
             en{" "}
             Solutions & <span className="text-indigo-600">Technologies IT</span>
