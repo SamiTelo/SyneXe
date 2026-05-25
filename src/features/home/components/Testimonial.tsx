@@ -14,7 +14,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Grâce à leur expertise en transformation digitale, nous avons réduit nos coûts opérationnels de 40%. Une agence qui comprend réellement les enjeux technologiques des entreprises modernes.",
+      "Une équipe professionnelle et réactive qui a su transformer notre vision en une solution digitale moderne et performante. Le résultat a largement dépassé nos attentes.",
     name: "Sarah Foster",
     role: "CEO at TechVentures",
     image: "/assets/client-2.png",
@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     quote:
-      "Leur équipe a déployé notre infrastructure cloud en un temps record. La qualité des solutions IT proposées dépasse largement nos attentes initiales. Un partenaire de confiance.",
+      "Nous avons apprécié leur expertise technique, leur accompagnement et la qualité du développement réalisé. Une collaboration fluide avec un véritable sens du détail.",
     name: "David Farnandes",
     role: "CTO at Innovatech",
     image: "/assets/client-1.png",
@@ -49,7 +49,7 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 export const TestimonialSection = () => {
   return (
-    <section id="testimonial" className="relative w-full bg-white py-18 md:py-38 overflow-hidden">
+    <section id="testimonial" className="relative w-full bg-white py-16 md:py-38 overflow-hidden">
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}

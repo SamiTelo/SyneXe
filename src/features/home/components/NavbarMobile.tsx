@@ -108,10 +108,11 @@ export function SheetSide() {
             {/* Footer */}
             <SheetFooter>
               <a
-                href="/assets/cv/cv-tiemtore-samuel.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:contactsynexa7@gmail.com?subject=${encodeURIComponent(
+                  "Demande de devis",
+                )}&body=${encodeURIComponent(
+                  "Bonjour, je souhaite obtenir un devis ou un forfait pour vos services.",
+                )}`}
                 className="rounded-full border h-10 px-6 py-2.5 text-sm font-semibold text-white text-center transition-all hover:bg-black bg-primary"
               >
                 Demander un devis

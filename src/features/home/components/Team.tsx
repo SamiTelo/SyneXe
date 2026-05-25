@@ -32,11 +32,11 @@ export const TeamSection = () => {
         {/* Badge */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-            Services
+            Equipes
           </div>
         </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Meilleurs <span className="text-indigo-600">Teams</span>
+         Notre Équipe <span className="text-indigo-600"> d’Experts</span>
         </h2>
       </div>
 
@@ -55,7 +55,7 @@ export const TeamSection = () => {
         {/* ----------------------------------------
              Cards Grid Block
         ---------------------------------------- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8">
           {teamMembers.map((member) => (
             <div
               key={member.id}

@@ -13,28 +13,28 @@ const partners = [
   {
     id: 2,
     image: "/assets/mastercard.png",
-    alt: "Google",
+    alt: "mastercard",
     bgColor: "bg-[#ecdff5]",
     size: 150,
   },
   {
     id: 3,
     image: "/assets/paypal-logo.png",
-    alt: "Campfire",
+    alt: "paypal",
     bgColor: "bg-[#dde3f5]",
     size: 100,
   },
   {
     id: 4,
     image: "/assets/netflix.png",
-    alt: "Slack",
-    bgColor: "bg-[#fad9d5]",
+    alt: "netflix",
+    bgColor: "bg-[#dde3f5]",
     size: 158,
   },
   {
     id: 5,
-    image: "/assets/mastercard.png",
-    alt: "PayPal",
+    image: "/assets/tapsend.png",
+    alt: "tapsend",
     bgColor: "bg-[#dde3f5]",
     size: 120,
   },
@@ -52,12 +52,12 @@ export const PartnersSection = () => {
               className="flex justify-center"
             >
               <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-                Services
+                Partenaire
               </div>
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Meilleurs{" "}
-          <span className="text-indigo-600">Partner</span>
+          Nos{" "}
+          <span className="text-indigo-600">Partenaires</span>
         </h2>
       </div>
 

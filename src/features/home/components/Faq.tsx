@@ -17,27 +17,36 @@ type FaqItem = {
 const faqs: FaqItem[] = [
   {
     id: "faq-1",
-    question: "Comment puis-je obtenir une assistance technique IT ?",
+    question: "Quels services propose votre agence IT ?",
     answer:
-      "Notre équipe d'experts est disponible 24h/24 et 7j/7 pour vous accompagner. Nous proposons un support multi-canal : ticketing, téléphone et intervention sur site. Demande est traitée pour garantir une résolution rapide.",
+      "Nous accompagnons les entreprises dans leur transformation digitale à travers le développement web et mobile, l’optimisation SEO, la création d’interfaces modernes ainsi que la mise en place de solutions digitales performantes et sécurisées.",
   },
+
   {
     id: "faq-2",
-    question: "Quels types de solutions cloud proposez-vous ?",
+    question: "Combien de temps prend la réalisation d’un projet ?",
     answer:
-      "Nous déployons des infrastructures cloud hybrides, privées et publiques sur AWS, Azure et GCP. Nos architectes conçoivent des solutions scalables et sécurisées adaptées à la taille et aux enjeux de votre organisation.",
+      "La durée dépend de la complexité du projet et des fonctionnalités demandées. Un site vitrine peut être livré en quelques semaines, tandis qu’une application web ou mobile plus avancée nécessite généralement plusieurs phases de conception, développement et tests.",
   },
+
   {
     id: "faq-3",
-    question: "Comment sécurisez-vous les données de mon entreprise ?",
+    question: "Proposez-vous un support après la livraison ?",
     answer:
-      "Nous appliquons une approche Zero Trust combinée à des audits de sécurité réguliers, du chiffrement bout en bout et une surveillance continue. Nos solutions sont conformes aux normes ISO 27001, RGPD et aux meilleures pratiques du secteur.",
+      "Oui, nous assurons un accompagnement après la mise en ligne de votre projet. Cela inclut la maintenance, les mises à jour, l’assistance technique ainsi que l’optimisation continue des performances et de la sécurité.",
+  },
+
+  {
+    id: "faq-4",
+    question: "Comment démarre une collaboration avec votre équipe ?",
+    answer:
+      "Nous commençons par une analyse de vos besoins et objectifs afin de proposer une solution adaptée. Après validation du cahier des charges, notre équipe lance les phases de design, développement et déploiement du projet.",
   },
 ];
 
 export const FaqSection = () => {
   return (
-    <section id="faq" className="relative w-full bg-white overflow-hidden py-26">
+    <section id="faq" className="relative w-full bg-white overflow-hidden py-20">
       {/*----------------------------------------------
            Background: Circuit Board SVG
       ----------------------------------------------*/}
@@ -53,7 +62,7 @@ export const FaqSection = () => {
         {/* ----------------------------------------
              LEFT BLOC — Header + Accordion
         ---------------------------------------- */}
-        <div className="grid grid-rows-[auto_auto] gap-8">
+        <div className="grid grid-rows-[auto_auto] gap-10 md:gap-8">
         {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
@@ -79,7 +88,9 @@ export const FaqSection = () => {
           </p>
           </div>
 
-          {/* Accordion */}
+          {/*-----------------------------------------------
+              Accordion
+          ----------------------------------------------------*/}
           <Accordion
             type="single"
             collapsible
@@ -140,7 +151,7 @@ export const FaqSection = () => {
                 alt="faq"
                 width={600}
                 height={600}
-                className="w-145 h-auto sm:sm:w-120 md:w-120 md:h-auto"
+                className="w-145 h-auto sm:sm:w-120 md:w-126 md:h-auto"
                 priority
               />
             </div>
