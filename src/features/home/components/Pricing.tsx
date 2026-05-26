@@ -71,7 +71,7 @@ export const PricingSection = () => {
           </div>
         </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Différents <span className="text-indigo-600">Offres</span>
+          Nos Différents <span className="text-primary">Offres</span>
         </h2>
       </div>
 
@@ -86,7 +86,7 @@ export const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className="rounded-2xl overflow-hidden flex flex-col bg-[#eef0f8] hover:shadow-lg"
+              className="rounded-2xl overflow-hidden flex flex-col bg-[#eef0f8] hover:shadow-lg transition-all duration-300"
             >
               {/* ----------------------------------------
                    Card Header Block (dark)

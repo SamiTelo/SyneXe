@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export const CtaSection = () => {
   return (
-    <section id="cta" className="w-full bg-white px-6 py-10 md:pt-30 md:pb-20">
+    <section id="cta" className="w-full bg-white px-6 py-10 md:pt-36 md:pb-20">
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}

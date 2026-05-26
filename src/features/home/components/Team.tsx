@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Plus } from "lucide-react";
 
@@ -5,48 +7,56 @@ const teamMembers = [
   {
     id: 1,
     name: "Marcus Diallo",
-    role: "IT Solutions Architect",
+    role: "Architecte Solutions IT",
     image: "/assets/team-1.png",
   },
   {
     id: 2,
     name: "Sarah Kowalski",
-    role: "Desinger UI/UX",
+    role: "Designer UI/UX",
     image: "/assets/team-2.png",
   },
   {
     id: 3,
     name: "Elena Moretti",
-    role: "Cybersecurity Expert",
+    role: "Experte Cybersécurité",
     image: "/assets/team.png",
   },
 ];
 
 export const TeamSection = () => {
   return (
-    <section id="team" className="relative w-full bg-white py-10 md:py-24 px-6 overflow-hidden">
+    <section
+      id="team"
+      className="relative w-full bg-background py-10 md:py-24 px-6 overflow-hidden"
+    >
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
       <div className="text-center mb-22">
         {/* Badge */}
         <div className="flex justify-center">
-          <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-            Equipes
+          <div className="inline-flex items-center gap-3 bg-accent text-accent-foreground border border-border px-6 py-3 mb-4 rounded-full text-sm font-medium">
+            Équipe
           </div>
         </div>
-        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-         Notre Équipe <span className="text-indigo-600"> d’Experts</span>
+
+        {/* Heading */}
+        <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-foreground">
+          Notre Équipe{" "}
+          <span className="text-primary">d’Experts</span>
         </h2>
       </div>
 
       {/*----------------------------------------------
            Background Decorative Shape
       ----------------------------------------------*/}
-      <div className="absolute top-50 left-0 w-42 h-42 bg-gray-200/60 pointer-events-none"style={{
-              borderRadius: "62% 38% 46% 54% / 60% 44% 56% 40%",
-            }}
- />
+      <div
+        className="absolute top-50 left-0 w-42 h-42 bg-secondary/60 pointer-events-none blur-sm"
+        style={{
+          borderRadius: "62% 38% 46% 54% / 60% 44% 56% 40%",
+        }}
+      />
 
       {/*----------------------------------------------
            Main Content Grid
@@ -59,29 +69,31 @@ export const TeamSection = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col"
+              className="group bg-card rounded-2xl shadow-lg border border-border overflow-hidden flex flex-col transition-all duration-300  hover:shadow-2xl"
             >
               {/* ----------------------------------------
                    Image Block
               ---------------------------------------- */}
-              <div className="relative w-full aspect-[4/4.2]">
+              <div className="relative w-full aspect-[4/4.2] overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
+
                 {/* Plus button */}
                 <button
                   aria-label={`Voir le profil de ${member.name}`}
                   className="
                     absolute bottom-4 right-4
-                    w-10 h-10 rounded-full
-                    bg-[#5b4fcf] text-white
+                    w-11 h-11 rounded-full
+                    bg-primary text-primary-foreground
                     flex items-center justify-center
                     shadow-lg
-                    hover:bg-[#4a3fbf] transition-colors duration-200
+                    hover:scale-110
+                    transition-all duration-300
                     cursor-pointer
                   "
                 >
@@ -93,13 +105,17 @@ export const TeamSection = () => {
                    Info Block
               ---------------------------------------- */}
               <div className="py-8 px-4 flex flex-col items-center gap-2">
-                <h3 className="text-[#0f0f2d] text-lg font-bold">
+                <h3 className="text-card-foreground text-lg font-bold">
                   {member.name}
                 </h3>
-                <p className="text-[#5b4fcf] text-sm font-medium">
+
+                <p className="text-primary text-sm font-medium">
                   {member.role}
                 </p>
               </div>
+
+              {/* Bottom accent bar */}
+              <div className="h-0.75 w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-b-2xl" />
             </div>
           ))}
         </div>
