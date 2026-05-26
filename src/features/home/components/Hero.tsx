@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Play } from "lucide-react";
+import { SplitText } from "./SplitText";
+
 
 export const HeroSection = () => {
   return (
@@ -15,7 +17,6 @@ export const HeroSection = () => {
            Main Content Grid
       ----------------------------------------------------*/}
       <div className="max-w-7xl mx-auto gap-18 sm:gap-20 md:gap-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1.3fr] items-center md:mt-20">
-
         {/* ----------------------------------------
             BLOC LEFT: Text Presentation
         ----------------------------------------------- */}
@@ -48,10 +49,12 @@ export const HeroSection = () => {
 
             {/* Title */}
             <h1 className="font-bold text-[44px] sm:text-6xl md:text-[68px] leading-tight text-center md:text-left text-foreground">
-              Des solutions IT <span className="text-[#6C63D8]">robustes</span>{" "}
+              Des solutions IT{" "}
+              <span className="text-[#6C63D8]">
+                <SplitText texts={["robustes", "modernes"]} interval={2200} />
+              </span>{" "}
               et sûres
             </h1>
-
             {/* Description */}
             <p className="mt-6 sm:text-[16px] md:text-[16px] text-sm text-muted-foreground text-center md:text-left leading-relaxed pr-6">
               Nous concevons et déployons des solutions digitales sur mesure,
@@ -94,7 +97,7 @@ export const HeroSection = () => {
 
                 <span className="text-left ">
                   Vidéo <br />
-                   de Presentation
+                  de Presentation
                 </span>
               </button>
             </div>
