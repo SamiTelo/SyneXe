@@ -64,7 +64,7 @@ export const TestimonialSection = () => {
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
           Nos Avis{" "}
-          <span className="text-indigo-600">Clients</span>
+          <span className="text-primary">Clients</span>
         </h2>
       </div>
 
@@ -97,7 +97,7 @@ export const TestimonialSection = () => {
 
         {/* Squiggle top-right */}
         <svg
-          className="absolute top-8 right-8 w-14 h-24 text-[#6C4EF6]"
+          className="absolute top-8 right-8 w-14 h-24 text-primary"
           viewBox="0 0 56 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@ export const TestimonialSection = () => {
                       <p className="text-[#9CA3AF] text-xs mt-0.5">{t.role}</p>
                     </div>
                      {/* Quote badge overlapping bottom-left of photo */}
-                <div className="absolute right-8 w-10 h-10 rounded-full bg-[#6C4EF6] flex items-center justify-center shadow-lg">
+                <div className="absolute right-8 w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg">
                   <Quote className="w-4 h-4 text-white fill-white" strokeWidth={0} />
                 </div>
                   </div>

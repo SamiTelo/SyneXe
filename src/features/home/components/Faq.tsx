@@ -77,7 +77,7 @@ export const FaqSection = () => {
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
           Réponses à vos{" "}
-          <span className="text-indigo-600">Questions</span>
+          <span className="text-primary">Questions</span>
         </h2>
             {/* Description */}
           <p className="text-gray-500 sm:text-[16px] md:text-[16px] text-sm leading-relaxed max-w-lg">
@@ -106,7 +106,7 @@ export const FaqSection = () => {
                 <AccordionTrigger
                   className="
                     group px-5 py-5 text-sm font-bold text-left no-underline hover:no-underline
-                    data-[state=open]:bg-[#6C4EF6] data-[state=open]:text-white
+                    data-[state=open]:bg-primary data-[state=open]:text-white
                     data-[state=closed]:bg-white data-[state=closed]:text-[#0F0A2A]
                     data-[state=closed]:border-b data-[state=closed]:border-[#E5E7EB]
                     transition-colors duration-200 rounded-none

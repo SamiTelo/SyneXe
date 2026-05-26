@@ -51,7 +51,7 @@ export const BlogSection = () => {
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
           Nos Récent{" "}
-          <span className="text-indigo-600">Blog</span>
+          <span className="text-primary">Blog</span>
         </h2>
       </div>
 

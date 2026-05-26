@@ -57,7 +57,7 @@ export const PartnersSection = () => {
             </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
           Nos{" "}
-          <span className="text-indigo-600">Partenaires</span>
+          <span className="text-primary">Partenaires</span>
         </h2>
       </div>
 

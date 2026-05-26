@@ -44,7 +44,7 @@ export const Footer = () => {
               className="object-contain"
             />
 
-            <span className="text-[1.6rem] font-bold text-indigo-500 leading-none tracking-tight">
+            <span className="text-[1.6rem] font-bold text-primary leading-none tracking-tight">
               <span className="font-light text-[#1a1a3e]">Syne</span>Xa
             </span>
           </div>
@@ -76,9 +76,9 @@ export const Footer = () => {
                   items-center
                   justify-center
                   text-[#4a4a6a]
-                  hover:bg-[#5c35d4]
+                  hover:bg-primary
                   hover:text-white
-                  hover:border-[#5c35d4]
+                  hover:border-primary
                   transition-all
                   duration-200
                 "
@@ -100,7 +100,7 @@ export const Footer = () => {
             </h3>
 
             {/* Underline */}
-            <div className="w-16 h-0.5 bg-[#5c35d4]" />
+            <div className="w-16 h-0.5 bg-primary" />
           </div>
 
           {/* Links */}
@@ -121,7 +121,7 @@ export const Footer = () => {
                     gap-2
                     text-[0.875rem]
                     text-[#4a4a6a]
-                    hover:text-[#5c35d4]
+                    hover:text-primary
                     transition-colors
                     duration-150
                     group
@@ -130,7 +130,7 @@ export const Footer = () => {
                   <ChevronRight
                     size={14}
                     className="
-                      text-[#5c35d4]
+                      text-primary
                       group-hover:translate-x-1
                       transition-transform
                       duration-150
@@ -155,7 +155,7 @@ export const Footer = () => {
             </h3>
 
             {/* Underline */}
-            <div className="w-16 h-0.5 bg-[#5c35d4]" />
+            <div className="w-16 h-0.5 bg-primary" />
           </div>
 
           {/* Contact items */}
@@ -184,7 +184,7 @@ export const Footer = () => {
                     w-11
                     h-11
                     rounded-full
-                    bg-[#5c35d4]
+                    bg-primary
                     flex
                     items-center
                     justify-center
@@ -230,7 +230,7 @@ export const Footer = () => {
             </h3>
 
             {/* Underline */}
-            <div className="w-16 h-0.5 bg-[#5c35d4]" />
+            <div className="w-16 h-0.5 bg-primary" />
           </div>
 
           {/* Description */}
@@ -271,7 +271,7 @@ export const Footer = () => {
               className="
                 w-12
                 h-12
-                bg-[#5c35d4]
+                bg-primary
                 flex
                 items-center
                 justify-center
@@ -291,7 +291,7 @@ export const Footer = () => {
       {/* ----------------------------------------
             Bottom Bar — Copyright
          ----------------------------------------------- */}
-      <div className="w-full bg-[#5c35d4]">
+      <div className="w-full bg-primary">
         <div className="max-w-350 mx-auto px-6 sm:px-8 py-4">
           <p className="text-[0.8rem] text-white/90 text-center ml-0 md:ml-10 sm:text-center md:text-left font-medium">
             Copyright © 2025 SyneXa - All rights reserved | <a href="https://sam-dev-portfolio-one.vercel.app/" className="font-extrabold">Sam Dev</a>
