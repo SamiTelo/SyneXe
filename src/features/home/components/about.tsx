@@ -73,7 +73,7 @@ export const AboutSection = () => {
 
           {/* Heading */}
           <h2 className="text-3xl md:text-[38px] font-bold text-foreground leading-snug">
-            Plus de 15 Ans d&apos;Expérience
+            Plus de 16 Ans d&apos;Expérience
             <br />
             en{" "}
             <span className="text-primary">
