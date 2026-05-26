@@ -163,7 +163,7 @@ export const TestimonialSection = () => {
         {/* -----------------------------------------------
              Cards Grid
         ----------------------------------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-6">
           {testimonials.map((t) => (
             <div
               key={t.id}

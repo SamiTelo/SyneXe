@@ -135,7 +135,7 @@ export const FaqSection = () => {
                     [&>svg]:hidden
                   "
                 >
-                  <span className="flex-1 text-[18px]">{faq.question}</span>
+                  <span className="flex-1text-[16px] md:text-[18px]">{faq.question}</span>
                   {/* Custom icon: − when open, + when closed */}
                   <span
                     className="
