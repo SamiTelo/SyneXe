@@ -1,7 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { containerVariants, itemVariants } from "@/animations/fade.animation";
 
 const services = [
   {
@@ -39,7 +41,17 @@ export const ServiceSection = () => {
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-22">
+      <motion.div
+       initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 80,
+            damping: 12,
+          }} 
+      className="text-center mb-22">
         {/* Badge */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-3 bg-accent text-accent-foreground border border-border px-6 py-3 mb-4 rounded-full text-sm font-medium">
@@ -52,18 +64,26 @@ export const ServiceSection = () => {
           Propulsez votre{" "}
           <span className="text-primary">activité</span>
         </h2>
-      </div>
+      </motion.div>
 
       {/*----------------------------------------------
            Main Content Grid
       ----------------------------------------------*/}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 max-w-7xl mx-auto px-0 md:px-6">
+      <motion.div
+       variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }} 
+      className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 max-w-7xl mx-auto px-0 md:px-6">
         {/* ----------------------------------------
             BLOCS
         ---------------------------------------- */}
         {services.map(
           ({ id, image, alt, title, description }) => (
-            <div
+            <motion.div
+            variants={itemVariants}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
               key={id}
               className="group flex flex-col rounded-2xl overflow-hidden shadow-lg border border-border bg-card transition-all duration-300  hover:shadow-2xl"
             >
@@ -101,10 +121,10 @@ export const ServiceSection = () => {
 
               {/* Bottom accent bar */}
               <div className="h-0.75 w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-b-2xl" />
-            </div>
+            </motion.div>
           )
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };

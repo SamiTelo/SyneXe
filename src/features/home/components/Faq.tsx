@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   Accordion,
@@ -66,7 +67,17 @@ export const FaqSection = () => {
         {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-          <div className="grid gap-3">
+          <motion.div
+           initial={{ x: -50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+           className="grid gap-3">
            {/* Badge */}
             <div
               className="flex justify-start"
@@ -86,12 +97,23 @@ export const FaqSection = () => {
             Notre expertise couvre l&apos;intégration cloud et
             le développement
           </p>
-          </div>
+          </motion.div>
 
           {/*-----------------------------------------------
               Accordion
           ----------------------------------------------------*/}
-          <Accordion
+         <motion.div
+         initial={{ y: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+         >
+           <Accordion
             type="single"
             collapsible
             defaultValue="faq-1"
@@ -138,12 +160,23 @@ export const FaqSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
+         </motion.div>
         </div>
 
         {/* ----------------------------------------
              RIGHT BLOC — Circle Image
         ---------------------------------------- */}
-        <div className="flex items-center justify-center lg:justify-end">
+        <motion.div
+         initial={{ x: 50, opacity: 0, scale: 0.95 }}
+        whileInView={{ x: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{
+          duration: 1.5,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+        }}
+         className="flex items-center justify-center lg:justify-end">
           <div className="relative flex justify-center ">
             <div className="w-full max-w-3xl">
               <Image
@@ -156,7 +189,7 @@ export const FaqSection = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

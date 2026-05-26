@@ -61,7 +61,16 @@ export const CounterSection = () => {
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
-      <div
+      <motion.div
+          initial={{ y: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
         ref={ref}
         className="relative max-w-309 mx-auto rounded-4xl overflow-hidden"
         style={{ background: "#684df4" }}
@@ -103,7 +112,7 @@ export const CounterSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

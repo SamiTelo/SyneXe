@@ -1,5 +1,7 @@
 "use client";
 
+import { containerVariants, itemVariants } from "@/animations/fade.animation";
+import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 const plans = [
@@ -63,7 +65,18 @@ export const PricingSection = () => {
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-22">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 80,
+          damping: 12,
+        }}
+        className="text-center mb-22"
+      >
         {/* Badge */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
@@ -73,7 +86,7 @@ export const PricingSection = () => {
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
           Nos Différents <span className="text-primary">Offres</span>
         </h2>
-      </div>
+      </motion.div>
 
       {/*----------------------------------------------
            Main Content Grid
@@ -82,9 +95,18 @@ export const PricingSection = () => {
         {/* ----------------------------------------
              Cards Grid Block
         ---------------------------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6"
+        >
           {plans.map((plan) => (
-            <div
+            <motion.div
+              variants={itemVariants}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
               key={plan.id}
               className="rounded-2xl overflow-hidden flex flex-col bg-[#eef0f8] hover:shadow-lg transition-all duration-300"
             >
@@ -155,9 +177,9 @@ export const PricingSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

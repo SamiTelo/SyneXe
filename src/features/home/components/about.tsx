@@ -16,7 +16,7 @@ export const AboutSection = () => {
   return (
     <section
       id="about"
-      className="w-full bg-background pb-30 md:pb-40 -mt-20 sm:-mt-20 md:mt-0 px-6 lg:px-16"
+      className="w-full bg-background pb-30 md:pb-40 -mt-20 sm:-mt-20 md:-mt-10 px-6 lg:px-16"
     >
       {/*----------------------------------------------
            Main Content Grid
@@ -25,7 +25,17 @@ export const AboutSection = () => {
         {/* ----------------------------------------
             BLOC GAUCHE — Image avec badge
         ----------------------------------------------- */}
-        <div className="relative flex items-center justify-center pr-0 md:pr-6 order-2 md:order-1">
+        <motion.div 
+        initial={{ x: -50, opacity: 0, scale: 0.95 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+        className="relative flex items-center justify-center pr-0 md:pr-6 order-2 md:order-1">
           <div className="absolute inset-0 z-0" />
 
           <div className="relative flex justify-center sm:pl-12 md:pl-10 pl-0 mt-8 md:mt-10">
@@ -58,12 +68,22 @@ export const AboutSection = () => {
               Clients Actifs
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* ----------------------------------------
             BLOC DROIT — Texte, features, CTA
         ----------------------------------------------- */}
-        <div className="flex flex-col gap-6 order-1 md:order-2">
+        <motion.div
+        initial={{ y: 50, opacity: 0, scale: 0.95 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 1.5,
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+              }} 
+        className="flex flex-col gap-6 order-1 md:order-2">
           {/* Badge */}
           <div className="flex justify-start">
             <div className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-6 py-3 rounded-full text-sm font-medium border border-border">
@@ -112,7 +132,7 @@ export const AboutSection = () => {
           </div>
 
           {/* CTA Button */}
-          <Link href="#competence">
+          <Link href="#pricing">
             <motion.div
               whileHover={{
                 scale: 1.05,
@@ -125,7 +145,7 @@ export const AboutSection = () => {
                 stiffness: 200,
                 damping: 10,
               }}
-              className="w-fit md:w-auto inline-flex justify-center items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full md:text-[16px] text-sm border border-transparent hover:bg-background hover:text-foreground hover:border-border transition-all duration-300"
+              className="w-fit md:w-auto inline-flex justify-center items-center gap-2 bg-primary text-primary-foreground px-6 py-3.5 rounded-full md:text-[16px] text-sm border border-transparent"
             >
               <ArrowUpRight size={20} />
 
@@ -134,7 +154,7 @@ export const AboutSection = () => {
               Nos meilleures offres
             </motion.div>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
