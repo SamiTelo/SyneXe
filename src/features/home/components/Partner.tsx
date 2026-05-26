@@ -27,15 +27,15 @@ const partners = [
   },
   {
     id: 4,
-    image: "/assets/netflix.png",
-    alt: "netflix",
+    image: "/assets/mastercard.png",
+    alt: "mastercard",
     bgColor: "bg-[#dde3f5]",
     size: 158,
   },
   {
     id: 5,
-    image: "/assets/tapsend.png",
-    alt: "tapsend",
+    image: "/assets/dropbox.png",
+    alt: "dropbox",
     bgColor: "bg-[#dde3f5]",
     size: 120,
   },
@@ -43,32 +43,33 @@ const partners = [
 
 export const PartnersSection = () => {
   return (
-    <section id="partner" className="relative w-full bg-white overflow-hidden pb-50 pt-0 md:pb-46 md:pt-18 px-4 md:px-8 lg:px-16">
+    <section
+      id="partner"
+      className="relative w-full bg-white overflow-hidden pb-50 pt-0 md:pb-46 md:pt-18 px-4 md:px-8 lg:px-16"
+    >
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
       <motion.div
-      initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{
-            duration: 0.8,
-            type: "spring",
-            stiffness: 80,
-            damping: 12,
-          }} 
-       className="text-center mb-22">
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 80,
+          damping: 12,
+        }}
+        className="text-center mb-22"
+      >
         {/* Badge */}
-            <div
-              className="flex justify-center"
-            >
-              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-                Partenaire
-              </div>
-            </div>
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+            Partenaire
+          </div>
+        </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos{" "}
-          <span className="text-primary">Partenaires</span>
+          Nos <span className="text-primary">Partenaires</span>
         </h2>
       </motion.div>
 
@@ -93,8 +94,6 @@ export const PartnersSection = () => {
       <div className="absolute left-[5%] bottom-[18%] w-10 h-10 rounded-full bg-indigo-100 opacity-50" />
       {/* Ghost circle bottom right */}
       <div className="absolute -right-5 bottom-[5%] w-22.5 h-22.5 rounded-full bg-gray-100 opacity-40" />
-
- 
 
       {/*----------------------------------------------
            Main Content Grid — wave + logos
@@ -123,29 +122,49 @@ export const PartnersSection = () => {
             BLOCS — partner logo circles grid
         ---------------------------------------- */}
         <div className="grid grid-cols-5 items-center justify-items-center gap-4 relative">
-          {partners.map(({ id, image, alt, bgColor, size }) => (
-            <div
+          {partners.map(({ id, image, alt, bgColor, size }, index) => (
+            <motion.div
               key={id}
               className="flex items-center justify-center group cursor-pointer"
+              animate={{
+                y: [0, -12, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: index * 0.25, // décale chaque logo
+              }}
             >
-              <div
-                className={`
-                  relative flex items-center justify-center rounded-full
-                  ${bgColor}
-                  transition-transform duration-300 group-hover:scale-110
-                  group-hover:shadow-lg
-                `}
-                style={{ width: size, height: size }}
+              <motion.div
+                whileHover={{
+                  scale: 1.12,
+                  y: -6,
+                  rotate: 2,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 12,
+                }}
+                className={`relative flex items-center justify-center rounded-full ${bgColor} shadow-sm group-hover:shadow-2xl`}
+                style={{
+                  width: size,
+                  height: size,
+                }}
               >
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-full bg-primary/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                 <Image
                   src={image}
                   alt={alt}
                   width={size * 0.52}
                   height={size * 0.52}
-                  className="object-contain"
+                  className="object-contain relative z-10"
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
