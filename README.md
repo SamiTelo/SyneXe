@@ -2,11 +2,13 @@
 
 **SyneXa**, un site vitrine moderne et responsive dédié aux solutions digitales, au développement web & mobile ainsi qu’à l’optimisation SEO.
 
+---
 
 ## À propos
 
 Ce site a été conçu pour présenter une agence IT moderne, mettre en avant ses domaines d’expertise et permettre aux entreprises de découvrir facilement ses services et de prendre contact rapidement.
 
+---
 
 ## Objectifs du projet
 
@@ -25,6 +27,7 @@ Ce site a été conçu pour présenter une agence IT moderne, mettre en avant se
 * **TypeScript** — Code robuste et maintenable
 * **Framer Motion** — Animations fluides et modernes
 
+---
 
 ## Fonctionnalités
 
@@ -51,6 +54,7 @@ Ce site a été conçu pour présenter une agence IT moderne, mettre en avant se
 * Support multilingue
 * Mode sombre
 
+---
 
 ## Captures d’écran
 
@@ -80,9 +84,7 @@ Ce site a été conçu pour présenter une agence IT moderne, mettre en avant se
 
 **Voir le site SyneXa :**
 
-```bash
-https://synexa-ashy.vercel.app
-```
+[synexa-ashy.vercel.app](https://synexa-ashy.vercel.app)
 
 ---
 
