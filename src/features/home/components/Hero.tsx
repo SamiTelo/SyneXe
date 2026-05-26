@@ -65,7 +65,7 @@ export const HeroSection = () => {
             {/* Buttons */}
             <div className="mt-8 flex flex-col items-center gap-6 md:flex-row md:justify-start md:gap-8">
               {/* Primary Button */}
-              <Link href="#competence">
+              <Link href="#service">
                 <motion.div
                   whileHover={{
                     scale: 1.05,

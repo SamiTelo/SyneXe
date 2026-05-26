@@ -1,5 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Calendar, MessageCircle, LayoutGrid, ArrowUpRight } from "lucide-react";
+import {
+  Calendar,
+  MessageCircle,
+  LayoutGrid,
+  ArrowUpRight,
+} from "lucide-react";
+import { containerVariants, itemVariants } from "@/animations/fade.animation";
 
 const articles = [
   {
@@ -36,36 +45,55 @@ const articles = [
 
 export const BlogSection = () => {
   return (
-    <section id="blog " className="w-full pt-30 pb-40 md:pt-42 md:pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/blog-background.png')]">
-       {/*----------------------------------------------
+    <section
+      id="blog "
+      className="w-full pt-30 pb-40 md:pt-42 md:pb-56 px-6 relative overflow-hidden bg-contain bg-no-repeat bg-center bg-[url('/assets/blog-background.png')]"
+    >
+      {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-22">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 80,
+          damping: 12,
+        }}
+        className="text-center mb-22"
+      >
         {/* Badge */}
-            <div
-              className="flex justify-center"
-            >
-              <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
-                Blog
-              </div>
-            </div>
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-3 bg-accent text-primary px-6 py-3 mb-4 rounded-full text-sm font-medium">
+            Blog
+          </div>
+        </div>
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-gray-900">
-          Nos Récent{" "}
-          <span className="text-primary">Blog</span>
+          Nos Récent <span className="text-primary">Blog</span>
         </h2>
-      </div>
+      </motion.div>
 
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
       <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto px-0 md:px-6">
-
         {/* ----------------------------------------
               BLOC — Articles Grid (3 colonnes)
            ----------------------------------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {articles.map((article) => (
-            <div
+            <motion.div
+              variants={itemVariants}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
               key={article.id}
               className="grid grid-rows-[auto_1fr] bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden"
             >
@@ -82,7 +110,6 @@ export const BlogSection = () => {
 
               {/* ---- Card Body ---- */}
               <div className="grid grid-rows-[auto_auto_1fr_auto] gap-3 p-5">
-
                 {/* Meta — date & comments */}
                 <div className="flex items-center gap-4 text-gray-400 text-xs">
                   <span className="flex items-center gap-1.5">
@@ -112,15 +139,13 @@ export const BlogSection = () => {
                     {article.author}
                   </span>
                   <span className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 text-gray-400 hover:bg-indigo-600 hover:border-indigo-600 hover:text-white transition-all duration-300 cursor-pointer">
-                  <ArrowUpRight size={15} />
-                </span>
+                    <ArrowUpRight size={15} />
+                  </span>
                 </div>
-
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
