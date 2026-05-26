@@ -1,6 +1,6 @@
-import { AboutSection } from "./components/about";
+import { AboutSection } from "./components/About";
 import { BlogSection } from "./components/Blog";
-import { CounterSection } from "./components/counter";
+import { CounterSection } from "./components/Counter";
 import { CtaSection } from "./components/Cta";
 import { FaqSection } from "./components/Faq";
 import { Footer } from "./components/Footer";
