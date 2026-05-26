@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export const CtaSection = () => {
@@ -6,7 +9,17 @@ export const CtaSection = () => {
       {/*----------------------------------------------
            Main Content Grid
         ----------------------------------------------------*/}
-      <div className="grid grid-cols-1 max-w-7xl mx-auto px-0 md:px-6">
+      <motion.div
+       initial={{ y: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+       className="grid grid-cols-1 max-w-7xl mx-auto px-0 md:px-6">
         {/* ----------------------------------------
               BLOC — CTA Card
            ----------------------------------------------- */}
@@ -50,7 +63,7 @@ export const CtaSection = () => {
             <ArrowUpRight className="w-4 h-4 text-[#5B4EE8]" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

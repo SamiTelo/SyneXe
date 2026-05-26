@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const partners = [
@@ -46,7 +47,17 @@ export const PartnersSection = () => {
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-22">
+      <motion.div
+      initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 80,
+            damping: 12,
+          }} 
+       className="text-center mb-22">
         {/* Badge */}
             <div
               className="flex justify-center"
@@ -59,7 +70,7 @@ export const PartnersSection = () => {
           Nos{" "}
           <span className="text-primary">Partenaires</span>
         </h2>
-      </div>
+      </motion.div>
 
       {/*----------------------------------------------
            Decorative background dots

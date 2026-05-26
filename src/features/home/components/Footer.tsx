@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, Mail, MapPin, ChevronRight, Send } from "lucide-react";
 import {
@@ -33,7 +36,17 @@ export const Footer = () => {
         {/* ----------------------------------------
             BLOC 1 — Brand / Description / Socials
            ----------------------------------------------- */}
-        <div className="flex flex-col gap-6">
+        <motion.div
+         initial={{ x: -50, opacity: 0, scale: 0.95 }}
+            whileInView={{ x: 0, opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{
+              duration: 1.5,
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+            }}
+         className="flex flex-col gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
@@ -87,7 +100,7 @@ export const Footer = () => {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* ----------------------------------------
               BLOC 2 — Quick Links
@@ -222,7 +235,18 @@ export const Footer = () => {
         {/* ----------------------------------------
               BLOC 4 — Newsletter
            ----------------------------------------------- */}
-        <div className="flex flex-col gap-5">
+        <motion.div
+          initial={{ y: 50, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+          className="flex flex-col gap-5"
+        >
           {/* Heading */}
           <div>
             <h3 className="text-[1rem] font-bold text-[#1a1a3e] uppercase tracking-widest mb-2">
@@ -285,7 +309,7 @@ export const Footer = () => {
               <Send size={16} />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ----------------------------------------
@@ -294,7 +318,13 @@ export const Footer = () => {
       <div className="w-full bg-primary">
         <div className="max-w-350 mx-auto px-6 sm:px-8 py-4">
           <p className="text-[0.8rem] text-white/90 text-center ml-0 md:ml-10 sm:text-center md:text-left font-medium">
-            Copyright © 2025 SyneXa - All rights reserved | <a href="https://sam-dev-portfolio-one.vercel.app/" className="font-extrabold">Sam Dev</a>
+            Copyright © 2025 SyneXa - All rights reserved |{" "}
+            <a
+              href="https://sam-dev-portfolio-one.vercel.app/"
+              className="font-extrabold"
+            >
+              Sam Dev
+            </a>
           </p>
         </div>
       </div>

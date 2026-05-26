@@ -1,7 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Plus } from "lucide-react";
+import { containerVariants, itemVariants } from "@/animations/fade.animation";
+import { FabButton } from "@/components/ui/FabFButton";
 
 const teamMembers = [
   {
@@ -33,7 +35,18 @@ export const TeamSection = () => {
       {/*----------------------------------------------
            Header
       ----------------------------------------------*/}
-      <div className="text-center mb-22">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 80,
+          damping: 12,
+        }}
+        className="text-center mb-22"
+      >
         {/* Badge */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-3 bg-accent text-accent-foreground border border-border px-6 py-3 mb-4 rounded-full text-sm font-medium">
@@ -43,10 +56,9 @@ export const TeamSection = () => {
 
         {/* Heading */}
         <h2 className="mt-3 text-3xl md:text-[38px] font-bold text-foreground">
-          Notre Équipe{" "}
-          <span className="text-primary">d’Experts</span>
+          Notre Équipe <span className="text-primary">d’Experts</span>
         </h2>
-      </div>
+      </motion.div>
 
       {/*----------------------------------------------
            Background Decorative Shape
@@ -65,9 +77,18 @@ export const TeamSection = () => {
         {/* ----------------------------------------
              Cards Grid Block
         ---------------------------------------- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8"
+        >
           {teamMembers.map((member) => (
-            <div
+            <motion.div
+              variants={itemVariants}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
               key={member.id}
               className="group bg-card rounded-2xl shadow-lg border border-border overflow-hidden flex flex-col transition-all duration-300  hover:shadow-2xl"
             >
@@ -84,21 +105,7 @@ export const TeamSection = () => {
                 />
 
                 {/* Plus button */}
-                <button
-                  aria-label={`Voir le profil de ${member.name}`}
-                  className="
-                    absolute bottom-4 right-4
-                    w-11 h-11 rounded-full
-                    bg-primary text-primary-foreground
-                    flex items-center justify-center
-                    shadow-lg
-                    hover:scale-110
-                    transition-all duration-300
-                    cursor-pointer
-                  "
-                >
-                  <Plus size={18} strokeWidth={2.5} />
-                </button>
+                <FabButton className="absolute top-86 -right-78 md:top-84 md:-right-78"/>
               </div>
 
               {/* ----------------------------------------
@@ -116,9 +123,9 @@ export const TeamSection = () => {
 
               {/* Bottom accent bar */}
               <div className="h-0.75 w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-b-2xl" />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
