@@ -180,7 +180,7 @@ export const FaqSection = () => {
           <div className="relative flex justify-center ">
             <div className="w-full max-w-3xl">
               <Image
-                src="/assets/faq-img.png"
+                src="/assets/img-faq.png"
                 alt="faq"
                 width={600}
                 height={600}
